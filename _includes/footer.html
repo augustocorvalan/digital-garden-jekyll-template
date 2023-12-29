@@ -1,1 +1,10 @@
-This is the footer. Include anything you'd like here, like a link to an <a class="internal-link" href="{{ site.baseurl }}/about">About</a> page.
+<footer>
+    <div class="flex flex-row justify-center w-fit mx-auto p-6 border-y border-gray-100">
+    <p class="font-bold">CONTACT:</p>
+    {% for contact in site.data.contact %}
+        <a href="{{ contact.link }}" class="mx-2">
+            {{ contact.name }}
+        </a>
+    {% endfor %}
+    </div>
+</footer>

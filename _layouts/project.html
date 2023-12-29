@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<article class="prose max-w-none">
+  <div>
+    <h1>{{ page.title }}</h1>
+    <h2>{{ page.description }}</h2>
+  </div>
+
+  <div id="notes-entry-container">
+    <content>
+    <div class="my-4">
+        <p class="m-0 italic text-sm">{{ page.created_at }}</p>
+        <p class="m-0 italic text-sm">{{ page.materials }}</p>
+        <p class="m-0 italic text-sm">{{ page.size }}</p>
+    </div>
+    <div class="my-16">
+        <div class="flex w-full justify-center">
+            <div class="columns-1 md:columns-2 gap-4 space-y-4 p-4">
+            {% for image in page.images %}
+                <img class="rounded-md" src="{{ image }}">
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+      {{ content }}
+    </content>
+
+    {% assign exhibition_backlinks = page.backlinks | where_exp: "item", "item.path contains 'exhibitions'" %}
+    {% if exhibition_backlinks.size > 0 %}
+    <side style="font-size: 0.9em">
+      <h3 style="margin-bottom: 1em">Exhibitions</h3>
+      <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
+        {% for backlink in exhibition_backlinks %}
+          <div class="backlink-box">
+            <a class="internal-link" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a><br>
+            <span>{{ backlink.gallery_name }}</span>
+            <br/>
+            <span class="text-slate-400">{{ backlink.show_date }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </side>
+    {% endif %}
+  </div>
+</article>
+
+<!--
+<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+
+{% include notes_graph.html %}
+-->

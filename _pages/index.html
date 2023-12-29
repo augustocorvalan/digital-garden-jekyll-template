@@ -1,0 +1,31 @@
+---
+layout: page
+title: Home
+id: home
+permalink: /
+---
+
+<h2>Projects</h2>
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+{% for project in site.data.selected_projects %}
+    {% include home-card.html 
+        url=project.link 
+        title=project.title 
+        image_url=project.image_url 
+        description=project.description 
+        date=project.date
+    %}
+{% endfor %}
+</div>
+  
+<h2>Editor</h2>
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+{% for project in site.data.editor %}
+    {% include home-card.html 
+        url=project.link 
+        title=project.title 
+        image_url=project.image_url 
+        date=project.date
+    %}
+{% endfor %}
+</div>

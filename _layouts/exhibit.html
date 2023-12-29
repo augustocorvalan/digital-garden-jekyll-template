@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<article class="prose max-w-none">
+  <div>
+    <h1>{{ page.title }}</h1>
+    <a href="{{ page.gallery_url }}" class="text-lg">{{ page.gallery_name }}</a>
+    <p>{{page.show_date}}</p>
+  </div>
+
+  <div id="notes-entry-container">
+    <content>
+    <div class="my-4">
+        <p class="m-0 italic text-sm">{{ page.created_at }}</p>
+        <p class="m-0 italic text-sm">{{ page.materials }}</p>
+        <p class="m-0 italic text-sm">{{ page.size }}</p>
+    </div>
+    <div class="my-16">
+        <h3 class="uppercase">Installation Views</h3>
+        <div class="flex w-full justify-center">
+            <div class="columns-1 md:columns-2 gap-4 space-y-4 p-4">
+            {% for image in page.images %}
+                <img class="rounded-md" src="{{ image }}">
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+      {{ content }}
+    </content>
+  </div>
+</article>
+
+<!--
+<p>Here are all the notes in this garden, along with their links, visualized as a graph.</p>
+
+{% include notes_graph.html %}
+-->

@@ -8,19 +8,20 @@ Use this template repository to get started with your own digital garden.
 
 Preview the template here: https://digital-garden-jekyll-template.netlify.app/
 
-- Based on Jekyll, a static website generator
-- Supports Roam-style double bracket link syntax to other notes
-- Creates backlinks to other notes automatically
-- Features link previews on hover
-- Includes graph visualization of the notes and their links
-- Features a simple and responsive design
-- Supports Markdown or HTML notes
+-   Based on Jekyll, a static website generator
+-   Supports Roam-style double bracket link syntax to other notes
+-   Creates backlinks to other notes automatically
+-   Features link previews on hover
+-   Includes graph visualization of the notes and their links
+-   Features a simple and responsive design
+-   Supports Markdown or HTML notes
 
 <img width="1522" alt="Screen Shot 2020-05-19 at 23 05 46" src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png">
 
 ## A note about GitHub Pages
+
 > [!NOTE]  
-> **Update (January 2023)**: it seems that GitHub Pages supports custom plugins now, thanks to GitHub Actions ([view relevant discussion](https://github.com/maximevaillancourt/digital-garden-jekyll-template/discussions/144)). 
+> **Update (January 2023)**: it seems that GitHub Pages supports custom plugins now, thanks to GitHub Actions ([view relevant discussion](https://github.com/maximevaillancourt/digital-garden-jekyll-template/discussions/144)).
 
 GitHub Pages only partially supports this template: to power the interactive notes graph, this template uses a custom Jekyll plugin to generate the graph data in [`notes_graph.json`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/7ac331a4113bac77c993856562acc2bfbde9f2f7/_plugins/bidirectional_links_generator.rb#L102), and [GitHub Pages doesn't support custom Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins).
 
@@ -33,3 +34,45 @@ If you don't care about the graph, you can simply remove it from this layout, [a
 ## License
 
 Source code is available under the [MIT license](LICENSE.md).
+
+# Work in Progress
+
+-   [x] edit mutante pictures
+-   [x] transform them into a web friendly format
+-   [ ] Put them in their respective show pages
+    -   [x] Taking Space
+    -   Offsite 01
+    -   MFAST show
+-   [ ] Fix bi-directional links?
+-   [ ] templatize exhibit and works pages for easy reuse
+
+### Global
+
+-   Add News page
+-   Typography
+-   Add image carousel
+
+### Home Page
+
+-   Add featured projects (mutantechitecture)
+-   Add rest of projects
+
+### Project page
+
+-   image carousel
+-   links to shows
+-   then add show pages
+
+# Resources
+
+## UI Kits
+
+-   [HyperUI - free open-source tailwind UI elements](https://www.hyperui.dev/)
+
+## Jekyll + Tailwind
+
+-   https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll
+-   https://mzrn.sh/2022/04/09/starting-a-blank-jekyll-site-with-tailwind-css-in-2022/
+-   https://medium.com/@mauddev/jekyll-tailwind-netlify-9496352b49ee
+
+## Artist web inspo

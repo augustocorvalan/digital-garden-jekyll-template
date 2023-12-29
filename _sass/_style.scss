@@ -75,12 +75,18 @@ h6 {
   padding-bottom: 0;
 }
 
-a {
+.disable-link-style {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:not(.disable-link-style) {
   transition: background 300ms;
   padding: 0 0.1em;
   text-decoration: none;
   border-bottom: 1px solid $color-border;
   color: $color-primary;
+  text-decoration: none !important;
   &:hover {
     color: black !important;
     background: #fffaf1;
