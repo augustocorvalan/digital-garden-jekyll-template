@@ -1,19 +1,14 @@
-<a href="{{ include.url }}" class="disable-link-style group relative block h-64 sm:h-80 lg:h-96">
-    <span class="absolute inset-0 group-hover:border-2 border-dashed border-black"></span>
-    <div class="relative flex h-full transform items-center border-2 border-black bg-white transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2">
-        <div class="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6">
-            <img src="{{ include.image_url }}" alt="" class="h-56 mt-0 object-cover object-top">
-            <h2 class="mt-4 mb-0 text-xl font-medium sm:text-2xl">{{ include.title }}</h2>
+<a href="{{ include.url }}" class="disable-link-style group relative block sm:h-80 lg:h-96">
+    <div class="relative flex h-full transform items-center border-2 border-black bg-white transition-transform">
+        <div class="p-4 lg:pt-0 transition-opacity sm:p-6">
+            <img src="{{ include.image_url }}" alt="" class="h-56 m-0 object-cover object-top">
+            <h2 class="m-0 mt-2 text-xl font-medium sm:text-2xl">{{ include.title }}</h2>
+            <p class="m-0 text-sm sm:text-base">
+                {{ include.description }}
+            </p>
             <p class="m-0 text-xs text-slate-500">
                 {{ include.date }}
             </p>
         </div>
-        <div class="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8">
-            <h3 class="mt-4 text-xl font-medium sm:text-2xl">{{ include.title }}</h3>
-            <p class="mt-4 text-sm sm:text-base">
-                {{ include.description }}
-            </p>
-        <p class="mt-8 font-bold">Read more</p>
-    </div>
     </div>
 </a>

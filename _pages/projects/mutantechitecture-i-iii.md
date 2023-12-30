@@ -1,10 +1,12 @@
 ---
 layout: project
+show_home: true
 title: Mutantechitecture I-III
 description: kinetic play mobiles
 created_at: 2022
 materials: bambu, string, acrylic
 size: variable
+thumbnail: assets/images/mutantechitecture/07_titorosa_mutantechitecture-i-iii_2022.jpg
 images:
     - /assets/images/mutantechitecture/01_titorosa_mutantechitecture-i_2022.jpg
     - /assets/images/mutantechitecture/07_titorosa_mutantechitecture-i-iii_2022.jpg

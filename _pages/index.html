@@ -7,14 +7,17 @@ permalink: /
 
 <h2>Projects</h2>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% for project in site.data.selected_projects %}
-    {% include home-card.html 
-        url=project.link 
-        title=project.title 
-        image_url=project.image_url 
-        description=project.description 
-        date=project.date
-    %}
+{% assign sorted_pages = site.pages | sort: 'created_at' | reverse %}
+{% for page in sorted_pages %}
+    {% if page.path contains 'projects' and page.show_home == true %}
+      {% include home-card.html 
+          url=page.url 
+          title=page.title 
+          image_url=page.thumbnail
+          description=page.description 
+          date=page.created_at
+      %}
+    {% endif %}
 {% endfor %}
 </div>
   

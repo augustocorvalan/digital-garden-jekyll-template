@@ -37,31 +37,18 @@ Source code is available under the [MIT license](LICENSE.md).
 
 # Work in Progress
 
--   [x] edit mutante pictures
--   [x] transform them into a web friendly format
--   [ ] Put them in their respective show pages
-    -   [x] Taking Space
-    -   Offsite 01
-    -   MFAST show
--   [ ] Fix bi-directional links?
--   [ ] templatize exhibit and works pages for easy reuse
-
 ### Global
 
 -   Add News page
 -   Typography
--   Add image carousel
+-   Add Publications
+-   Add Curations
+-   Add Residencies?
 
 ### Home Page
 
--   Add featured projects (mutantechitecture)
--   Add rest of projects
-
-### Project page
-
--   image carousel
--   links to shows
--   then add show pages
+-   Add featured projects
+    -   Diagrammatic Poems
 
 # Resources
 

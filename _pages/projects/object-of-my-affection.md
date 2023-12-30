@@ -1,10 +1,12 @@
 ---
 layout: project
+show_home: true
 title: Object of My Affection
 description: custom phone cases for material speculation
 created_at: 2021
 materials: 3-D printed PLA, acrylic, smartphone
 size: variable
+thumbnail: assets/images/object-of-my-affection/thumbnail.jpg
 images:
     - /assets/images/object-of-my-affection/final-1.jpg
     - /assets/images/object-of-my-affection/final-2.jpg

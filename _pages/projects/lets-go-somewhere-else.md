@@ -1,10 +1,12 @@
 ---
 layout: project
+show_home: true
 title: Lets Go Somewhere Else
 description: pop-up horror story
 created_at: 2019
 materials: webpage
 size:
+thumbnail: assets/images/lets-go-somewhere-else/lets-go-1.png
 images:
     - /assets/images/lets-go-somewhere-else/lets-go-1.png
     - /assets/images/lets-go-somewhere-else/lets-go-2.png

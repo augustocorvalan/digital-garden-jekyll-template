@@ -1,10 +1,12 @@
 ---
 layout: project
+show_home: true
 title: Mutantechitecture V
 description: kinetic play mobile
 created_at: 2023
 materials: bambu, string, acrylic
 size: 7' x 3' x 4'
+thumbnail: assets/images/mutantechitecture/mutantechitecture_mobile_1.webp
 images:
     - /assets/images/mutantechitecture/mutantechitecture_mobile_1.webp
     - /assets/images/mutantechitecture/mutantechitecture_mobile_2.webp
