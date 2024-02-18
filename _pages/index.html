@@ -32,3 +32,16 @@ permalink: /
     %}
 {% endfor %}
 </div>
+
+<h2>Publications</h2>
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+{% for project in site.data.publications %}
+    {% include home-card.html 
+        url=project.link 
+        title=project.title 
+        image_url=project.image_url 
+        date=project.date
+        description=project.publisher
+    %}
+{% endfor %}
+</div>

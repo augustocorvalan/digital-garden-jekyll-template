@@ -1,5 +1,5 @@
-date,title,publisher,link
-2023-01-01,Two Love Poems,thismuch,https://thismuch.org/2023
-2021-01-01,MÀQUINX DE HACER MÀQUINXS, Taper #6,https://taper.badquar.to/6/maquinx_de_hacer_maquinxs.html
-2019-01-01,Let's Go Somewhere Else,Dead Alive,https://deadalivemagazine.com/vol1/lets-go-somewhere-else.html
-2018-01-01,Today Tomorrow Yesterday,Taper #2
+date,title,publisher,link,image_url
+2023,Two Love Poems,thismuch,https://thismuch.org/2023,assets/images/publications/thismuch-love-poems/thismuch-1.png
+2021,MÀQUINX DE HACER MÀQUINXS, Taper #6,https://taper.badquar.to/6/maquinx_de_hacer_maquinxs.html,assets/images/publications/maquina-de-hacer-maquina.png
+2019,Let's Go Somewhere Else,Dead Alive Magazein,https://deadalivemagazine.com/vol1/lets-go-somewhere-else.html,assets/images/publications/somewhere-else.png
+2018,Today Tomorrow Yesterday,Taper #2,https://taper.badquar.to/2/tty.html,assets/images/publications/tty.png
