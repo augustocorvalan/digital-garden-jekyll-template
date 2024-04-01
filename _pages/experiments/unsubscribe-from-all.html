@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+  <title>unsubscribe from all - agustin rosa</title>
+  <meta name="description" content="A web-based unsubscription form unfolds into an interactive horror story about the paranoia and dysmorphia of modern digital life in the corporate platform complex.">
+  <meta name="keywords" content="Electronic Poetry, New Media, Interactive Literature">
+  <meta name="author" content="Agustin Rosa">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: black;
+                color: pink;
+            }
+            content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                position: relative;
+                width: 765px;
+                margin: 0 auto;
+            }
+
+            section {
+                border: 2px solid pink;
+                color: pink;
+                background-color: black;
+                padding: 1rem;
+                width: 450px;
+                position: absolute;
+            }
+
+            section:nth-child(even) {
+                border: 2px solid black;
+                background-color: pink;
+                color: black;
+            }
+
+            .title {
+                font-size: 3rem;
+                font-weight: bold;
+                border-bottom: 3px dashed;
+                padding-bottom: 0.25rem;
+                margin-top: 0.25rem;
+            }
+
+            .options {
+                display: flex;
+                flex-direction: column;
+                font-size: 2rem;
+            }
+
+            input[type="radio"] {
+                appearance: none;
+                background-color: black;
+                font: inherit;
+                color: currentColor;
+                width: 1.15em;
+                height: 1.15em;
+                border: 0.15em solid currentColor;
+                border-radius: 50%;
+                transform: translateY(-0.075em);
+                display: grid;
+                place-content: center;
+            }
+
+            input[type="radio"]::before {
+                content: "";
+                width: 0.65em;
+                height: 0.65em;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: 120ms transform ease-in-out;
+                box-shadow: inset 1em 1em pink;
+            }
+
+            input[type="radio"]:checked::before {
+                transform: scale(1);
+            }
+
+            label {
+                font-family: system-ui, sans-serif;
+                font-size: 2rem;
+                font-weight: bold;
+                line-height: 1.1;
+                display: grid;
+                grid-template-columns: 1em auto;
+                gap: 0.5em;
+                text-transform: lowercase;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                border-bottom: 1px solid pink;
+                display: flex;
+                justify-content: space-around;
+                align-items: baseline;
+                z-index: 99;
+            }
+
+            nav a {
+                color: pink;
+                text-decoration: none;
+                border-bottom: 1px solid pink;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <p>UNSUBSCRIBE FROM ALL</p>
+            <a href="https://titorosa.com">A.Rosa</a>
+        </nav>
+        <content>
+
+        </content>
+    </body>
+    <script>
+       const initialData = [
+        {
+            title: 'Keep watching?',
+            options: [
+                'Keep watching',
+                'Keep watching',
+                'Keep watching',
+            ]
+        },
+        {
+            title: 'Keep watching?',
+            options: [
+                'Keep watching',
+                'Keep watching',
+                'Keep watching',
+            ]
+        },
+        {
+            title: 'Keep watching?',
+            options: [
+                'Keep watching',
+                'Keep watching',
+                'Keep watching',
+            ]
+        },
+        {
+            title: 'Do you trust me?',
+            options: ['yes', 'no']
+        },
+        {
+            title: 'Weekly goals',
+            options: [
+            'more on trend',
+            'more authentic',
+            'more responsive',
+            ]
+        },
+        {
+            title: 'What was that?',
+            options: [
+            'The woman who lives in the empty cupboards', 
+            'A box sent to your door', 
+            'The windows have disappeared']
+        },
+        {
+            title: 'Begin video call:',
+            options: ['enable screen-sharing', 'disable body language', 'allow face swap']
+        },
+        {
+            title: 'Plug into your stomach port',
+            options: ['Mouse', 'Keyboard', 'Microphone']
+        },
+        {
+            title: 'Grant us permission to alter your voice',
+            options: ['Deeper', 'Younger', 'Accent removal (natural English)']
+        },
+        {
+            title: 'Phrases to incorporate this week',
+            options: [
+            'Does my face look funny?',
+            'Mark as Spam',
+            'What are your sleeping medications?',
+            ]
+        },
+        {
+            title: 'Daily metrics',
+            options: [
+            'Views',
+            'Visibility',
+            'Brand awareness',
+            ]
+        },
+        {
+            title: 'Eye-tracking',
+            options: [
+            'yes', 'no'
+            ]
+        },
+        {
+            title: 'Simulate eye-contact',
+            options: [
+            'yes', 'no'
+            ]
+        },
+        {
+            title: 'Customize your appearance',
+            options: [
+                'De-aging',
+                'Smoothing (bicubic)',
+                'Whiten',
+            ]
+        },
+        {
+            title: 'Right now my face is',
+            options: [
+                'Pinned',
+                'Full-screen',
+                'Blurred'
+            ]
+        },
+        {
+            title: 'Do you wish to record this session?',
+            options: [
+                'yes', 'no'
+            ]
+        },
+        {
+            title: 'Sound settings',
+            options: [
+                'Unmute with consent',
+                'Unmute host',
+                'Mute all',
+            ]
+        },
+        {
+            title: 'Unsubscription reasons:',
+            options: [
+                'I do not want to tell reasons',
+                'I never signed up',
+                'I was hacked',
+            ]
+        },
+        {
+            title: 'Grant us permission to:',
+            options: [
+                'Listen to your voice',
+                'Record your keytaps',
+                'Enter your home',
+            ]
+        },
+        {
+            title: 'Enable nudity',
+            options: [
+                'yes', 'no'
+            ]
+        },
+        {
+            title: 'Right now',
+            options: [
+                'sharing screen',
+                'muting microphone',
+                'looking at my face',
+            ]
+        },
+        {
+            title: 'Woke up',
+            options: [
+                'gasping',
+                'still screaming',
+                'in the dark',
+            ]
+        },
+        {
+            title: 'Scan and upload',
+            options: [
+                'face',
+                'eyes',
+                'palm'
+            ]
+        },
+        {
+            title: 'Film yourself cooking',
+            options: [
+                '14 egg omelet',
+                '7 pancackes',
+                '28 extra spicy wings'
+            ]
+        },
+        {
+            title: 'This week mostly',
+            options: [
+                'Total dread',
+                'Total paranoia',
+                'Total running around',
+            ]
+        },
+        {
+            title: 'Last week mostly',
+            options: [
+                'video vertigo',
+                'regret',
+            ]
+        },
+        {
+            title: 'Connect your account',
+            options: [
+                'Pinterest',
+                'Instagram',
+                'Twitter'
+            ]
+        },
+        {
+            title: 'Begin livestream?',
+            options: [
+                'now', 'schedule', 'ask again'
+            ]
+        },
+        {
+            title: 'Unsubscription type:',
+            options: [
+                'nonscribe - unsubscribing without making a difference in anything',
+                'iterascribe - the act of continually repeating the same act of unsubscription',
+                'monoscribe - an unsubscription no one else notices',
+            ]
+        },
+        {
+            title: 'New feature:',
+            options: [
+                'Teeth straightening',
+                'automated smile insertion',
+                '"kind eyes" filter'
+            ]
+        },
+        {
+            title: 'Choose virtual background',
+            options: [
+                'The void',
+                'The void with a window',
+                'The void with a window and a plant'
+            ]
+        },
+        {
+            title: 'Choose virtual background',
+            options: [
+                'High-ranking medical executive',
+                'Experienced security expert',
+                'Expensive yoga instructor'
+            ]
+        },
+        {
+            title: 'Woke up',
+            options: [
+                'can\'t move',
+                'all is dark',
+                'gasping'
+            ]
+        },
+        {
+            title: 'As a child',
+            options: [
+                'used to lie about your age in chatrooms',
+                'kept making burner accounts',
+                'used to lie a lot'
+            ]
+        },
+        {
+            title: 'Choose server',
+            options: [
+            'everything is plastic', 
+            'the colonization of mars', 
+            'show me a healthy person',
+            ]
+        },
+        {
+            title: 'Yesterday I mostly',
+            options: [
+                'online shop',
+                'slept',
+                'panic attacks'
+            ]
+        },
+        {
+            title: 'Today I',
+            options: [
+                'ate then vomited',
+                'vomited then ate'
+            ]
+        },
+        {
+            title: 'Please listen carefully:',
+            options: [
+                'We don\'t currently offer support',
+                'Select for self-help',
+                'Select if you have an issue'
+            ]
+        },
+        {
+            title: 'I grant permission to be',
+            options: [
+            'shared',
+            'uploaded',
+            're-animated'
+            ]
+        },
+        {
+            title: 'Dreams today:',
+            options: [
+                'everything the same but your tongue grows back if you cut it off',
+                'you can bite anyone you already know',
+                'Pancakes everywhere but your face is a void',
+            ]
+        },
+        {
+            title: 'How tired are you right now?',
+            options: ['25-45', '50-75', '100+']
+        },
+        {
+            title: 'It will take 24-48 hours for your change to take effect',
+            options: ['opt-in', 'opt-out']
+        },
+
+        {
+            title: 'Verify your identity',
+            options: ['True face ID', 'Iris scan', 'Phone unlock']
+        },
+
+        {
+            title: 'Setup recurring payments',
+            options: [
+                'monthly', 'quarterly', 'yearly'
+            ]
+        },
+        {
+            title: 'Unsubscription reasons:',
+            options: [
+                'I do not want to tell reasons',
+                'I never signed up',
+                'I was hacked',
+            ]
+        },
+        {
+            title: 'Are you sure you want to unsubscribe?',
+            options: [
+                'yes',
+                'no',
+            ]
+        },
+       ]
+
+        const state = {
+            index: 0,
+            data: initialData.slice()
+        }
+        const handleCheckboxClick = (option, index) => {
+            // TODO: doesn't let you select the last option for some reason
+            let fragment
+            if (index >= state.data.length) {
+                fragment = state.data.pop()
+            } else {
+                fragment = state.data.splice(state.data.length - index - 1, 1)[0];
+            }
+
+            if (fragment) {
+                createFragment(fragment)
+            } else {
+                alert('no fragments')
+            }
+
+            if (state.data.length === 3) {
+                state.data = state.data.concat(initialData)
+            }
+       }
+
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        const createFragment = (item) => {
+                const fragment = document.createElement('section')
+                fragment.classList.add('fragment')
+
+                const top = getRandomNumber(0, 40)
+                const left = getRandomNumber(-5, 25)
+                console.log("top", top, "left", left)
+
+                fragment.style.top = `${top}vh`
+                fragment.style.left = `${left}vw`
+                fragment.style.zIndex = state.index
+                fragment.style.padding = `${(state.index*2)+16}px`
+
+                const options = item.options.map((option,i) => {
+                    return `<label>
+                        <input type="radio" onclick="handleCheckboxClick('${option}',${i})">
+                        <span class="option">${option}</span>
+                    </label>`
+                })
+
+                fragment.innerHTML = `
+                    <p class="title">${item.title}</p>
+                    <div class="options">${options.join('')}</div>
+                `
+
+                document.querySelector('content').appendChild(fragment)
+                state.index = state.index + 1
+
+                return fragment
+            }
+
+            createFragment(state.data.pop())
+    </script>
+</html>
