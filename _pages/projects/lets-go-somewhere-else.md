@@ -1,6 +1,6 @@
 ---
 layout: project
-show_home: true
+show_home: false
 title: Lets Go Somewhere Else
 description: pop-up horror story
 created_at: 2019

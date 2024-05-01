@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Extremely Constrained Notepad (Taper #12)</title>
+
+<!-- “Extremely Constrained Notepad” Copyright (C) 2024 Agustin Rosa
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #12: Tools, Spring 2024:
+
+https://taper.badquar.to/12/extremely_constrained_notepad.html
+
+The Extremely Constrained Notepad allows you to type 20 characters at a time, deleting the first character as you type the 21st. 
+I wanted to build a useless tool, a word processor with amnesia. 
+But what new forms can arise from this constraint?
+What kind of writing can thrive in a program that has a memory, 
+not like a machine's memory, infinite and unchanging, 
+but like a human's, fallible and ephemeral?
+This tool has proven particularly suited for constrained writing exercises and livewriting performances.
+For composing poems that are too long to remember, but too short to write down.
+The tool is portable, simple, and easy to extend with custom functionality.
+I look forward to see what the Taper community will create with it.
+
+In order to use this tool, start typing.
+ECN has a repeat mode, which when toggled will repeat the last key you pressed until you press a new key. 
+Repeat mode allows you to create aaaammbbiieennttt pppppoooeeeemsss llliikkeee ttthhiiisss.
+-->
+
+<style>
+	body { margin:0 ; overflow:hidden }
+	a { color:#eee ; text-decoration:none }
+	header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
+		position:relative ; z-index:1000 }
+	header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
+		border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
+</style>
+</head>
+<body>
+<header id=nav>
+	<h1>
+		<a href="prev.html">&lt;&lt;</a> &nbsp; 
+		<a href="index.html">Taper #12 :
+		Tools</a> : Spring 2024 &nbsp; 
+		<a href="next.html">&gt;&gt;</a><br>
+		<a href="extremely_constrained_notepad.html">“Extremely Constrained Notepad”</a> by
+		<a href="about.html#rosa">Agustin Rosa</a>
+	</h1>
+	
+</header> <!-- All poem code goes here, and must be less than or equal to 2048 bytes (not including closing </body> and </html> tags below)-->
+<style>
+	#c {padding: 4rem;color: #ADBEE6;background-color: black;height: 100vh;font-family: sans-serif;}h2 {font-size:1.5rem;font-weight: bold;border-bottom: 5px solid;}.i {color: transparent !important;}#ed {outline:none;width:100%;height:250px;background-color:black;color:#ADBEE6;border: 2px solid;border-bottom: none;border-right: none;resize:none;font-size:3rem;display: block;text-align: center;margin-top: 2rem;padding: 4rem;}#ed:focus {outline:none;}.v {writing-mode: vertical-lr;text-orientation: upright;}button {color: #ADBEE6;background-color: black;border: 2px solid;cursor: pointer;}button:hover, .active {color: black;background-color: #ADBEE6;}
+</style>
+<div id="c">
+	<h2>EXTREMELY CONSTRAINED NOTEPAD</h2>
+	<div id="toggles">
+		<button id="repeat" onclick="toggleMode('repeat')">repeat</button>
+		<button id="hyperrepeat" onclick="toggleMode('hyperrepeat')">hyperrrepeat</button>
+		<button id="vertical" onclick="toggleMode('vertical')">vertical</button>
+	</div>
+	<textarea id="ed" autofocus placeholder="Start typing..." ></textarea>	
+</div>
+<script>
+var repeatIntervalID;
+var lastKeyPressed;
+function toggleMode(key) {
+	if (!st[key]) return
+	st[key].on = !st[key].on
+	st[key].btn.classList.toggle('active')
+	st.editor.focus()
+
+	st[key].cb()
+}
+
+function getCharacterCount(){var text=st.editor.value;var characterCount=text.length;return characterCount}
+function removeFirstCharacter(text){return text.substring(1)}
+function replaceEditorText(newText){st.editor.value=newText}
+function getEditorText(){return st.editor.value}
+function limitCharacterCount(){var characterCount=getCharacterCount();if(characterCount>20){replaceEditorText(removeFirstCharacter(getEditorText()))}}
+function appendLastKeyPressed(){var editorText=getEditorText();var newEditorText=editorText+lastKeyPressed;replaceEditorText(newEditorText)}
+function handleInput(e){lastKeyPressed=e.key;limitCharacterCount()}
+
+const st = {
+	editor: document.getElementById("ed"),
+	repeatRate: 250,
+	repeat: { on: false, cb: function(){if(st.repeat.on&&lastKeyPressed!=undefined&&lastKeyPressed.length<2){appendLastKeyPressed();limitCharacterCount()}}},
+	hyperrepeat: {on: false, cb: function(){	st.repeatRate = st.hyperrepeat.on ? 100 : 250; if (repeatIntervalID) clearInterval(repeatIntervalID); repeatIntervalID = setInterval(function(){st.repeat.cb()},st.repeatRate);}},
+	vertical: {on: false, cb: function(){st.editor.classList.toggle("v")}}
+}
+function setup() {
+	for (let key in st) {
+		btn = document.getElementById(key)
+		if (btn) st[key].btn = btn
+	}
+	st.hyperrepeat.cb()
+	document.addEventListener("keydown",handleInput);
+}
+setup()
+</script>
+</body>
+</html>

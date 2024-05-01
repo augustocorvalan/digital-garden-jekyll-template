@@ -35,7 +35,8 @@ permalink: /
 
 <h2>Publications</h2>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% for project in site.data.publications %}
+{% assign sorted_pubs = site.data.publications | sort: 'created_at' %}
+{% for project in sorted_pubs %}
     {% include home-card.html 
         url=project.link 
         title=project.title 
