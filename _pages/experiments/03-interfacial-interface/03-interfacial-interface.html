@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0" />
+    <title>Interfacial Interface</title>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Lora';
+            src: local('Lora');
+        }
+
+        :root {
+            --font-header: 'Lora', serif;
+            --font-body: sans-serif;
+            --color-highlight-light: #bbb06e;
+            --color-highlight-dark: #7c7848;
+            --color-highlight-darkest: #4e5037;
+            --color-text: #1b1919;
+            --color-bg-light: #e8deb8;
+        }
+
+
+        body {
+            background-color: var(--color-bg-light);
+            color: var(--color-text);
+            font-family: var(--font-body);
+            padding-top: 5vh;
+            padding-right: 5vw;
+            padding-left: 5vw;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4, h5 {
+            font-family: var(--font-header);
+            font-weight: normal;
+            color: var(--color-highlight-darkest);
+        }
+
+        p {
+            color: var(--color-highlight-darkest);
+        }
+
+        h1 {
+            font-size: 4rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 2.25rem;
+        }
+
+        h4 {
+            font-size: 1.75rem;
+            text-decoration: underline;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+        }
+
+        li {
+            color: var(--color-highlight-darkest);
+            list-style-type: none;
+            margin: 0.75rem 0;
+        }
+        li::before { 
+            content: "\2732";
+            color: var(--color-text);
+            padding-right: 0.25rem;
+        }
+
+        section:not(:first-of-type) {
+            margin-top: 6rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border: 2px solid var(--color-highlight-darkest);
+            border-left: none;
+            border-right: none;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 768px;
+            align-items: center;
+        }
+
+        .section-intro {
+            min-height: 100vh;
+            max-width: 100%;
+
+            img {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+
+        .section-2 {
+            h3 {
+                font-size: 2.25rem;
+                text-align: center;
+            }
+
+            .column {
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                line-height: 1.5;
+            }
+
+            .image-container {
+                position: relative;
+            }
+
+            img {
+                max-width: 500px;
+                width: 100%;
+                filter: hue-rotate(35deg);
+            }
+        }
+
+        .line {
+            height: 1px;
+            width: 100%;
+            background-color: var(--color-highlight-darkest);
+        }
+
+        .interstitial-1 {
+            min-height: 30vh;
+            color: var(--color-highlight-darkest);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            span {
+                font-size: 3rem;
+            }
+        }
+
+        .circled {
+            border: 1px solid var(--color-highlight-darkest);
+            border-radius: 100px;
+            padding: 0.5rem;
+            text-align: center;
+            font-size: 1.25rem;
+        }
+        p.sideways {
+            transform: rotate(-90deg);
+        }
+
+        p.sideways:last-of-type {
+            transform: rotate(90deg);
+        }
+
+        .interstitial-2 {
+            display: flex;
+            padding: 2rem 0;
+            justify-content: space-evenly;
+            flex-direction: column;
+            gap: 10px;
+            border: 2px solid var(--color-highlight-darkest);
+            border-left: none;
+            border-right: none;
+
+            .gradient-bar {
+                border: 1px solid black;
+                border-radius: 25px;
+                width: 100%;
+                height: 20px;
+                background: linear-gradient(to right, var(--color-bg-light), var(--color-highlight-light), var(--color-bg-light));
+            }
+
+            p {
+                font-size: 1.25rem;
+                text-align: center;
+                text-transform: lowercase;
+                background-color: var(--color-highlight-light);
+                color: var(--color-highlight-darkest);
+                border-radius: 25px;
+                padding: 0.5rem;
+                font-family: var(--font-header);
+            }
+        }
+
+
+        .two-column-layout {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .two-column-layout .column {
+            width: 45%;
+        }
+
+        input[type=range] {
+            accent-color: var(--color-highlight-light);
+        }
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-highlight-light);
+            border: var(--color-highlight-dark) 1px solid;
+            position: absolute;
+        }
+
+        .section-3 {
+            h3 {
+                font-style: italic;
+            }
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 50%;
+
+            div {
+                flex: 1 1 calc(50% - 5px);
+                /* 50% width minus half of gap */
+                aspect-ratio: 1;
+                /* Makes containers square */
+                position: relative;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--color-highlight-light);
+            }
+        }
+
+        .text-slider {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        .side-text {
+            font-family: var(--font-header);
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+
+
+        .overlay {
+            z-index: 1000;
+            position: absolute;
+        }
+
+        .star {
+            position: fixed;
+            font-size: 2rem;
+            color: var(--color-text);
+            pointer-events: none;
+        }
+
+        .top {
+            top: max(20px, env(safe-area-inset-top));
+            left: 0px;
+            right: 0px;
+        }
+
+        .bottom {
+            bottom: max(20px, env(safe-area-inset-bottom));
+            left: 0px;
+            right: 0px;
+        }
+
+        .top-left {
+            top: max(20px, env(safe-area-inset-top));
+            left: max(20px, env(safe-area-inset-left));
+        }
+
+        .top-right {
+            top: max(20px, env(safe-area-inset-top));
+            right: max(20px, env(safe-area-inset-right));
+        }
+
+
+        .bottom-left {
+            bottom: max(20px, env(safe-area-inset-bottom));
+            left: max(20px, env(safe-area-inset-left));
+        }
+
+        .bottom-right {
+            bottom: max(20px, env(safe-area-inset-bottom));
+            right: max(20px, env(safe-area-inset-right));
+        }
+
+        .section-social-effects {
+            .two-column-layout {
+                flex-direction: column;
+                align-items: center;
+            }
+            .column {
+                border: 1px solid var(--color-text);
+                padding: 1rem;
+                margin-bottom: 0.5rem;
+                width: 100%;
+            }
+            .glyph {
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100px;
+            }
+        }
+
+        .mini-sliders {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 1rem;
+
+            input {
+                width: 33%;
+            }
+        }
+
+        @media screen and (min-width: 1201px) {
+            h1 {
+                font-size: 6.5rem;
+            }
+
+            .section-intro {
+                flex-direction: row;
+                gap: 2rem;
+            }
+
+            .star {
+                font-size: 1rem;
+            }
+
+            .section-social-effects {
+                .two-column-layout {
+                    flex-direction: row;
+                    align-items: stretch;
+                }
+                .column {
+                    width: 45%;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Stars -->
+<div class="overlay">
+    <div class="line star top"></div>
+    <div class="star top-left circled">✦</div>
+    <div class="star top-right circled">✦</div>
+    <div class="star bottom-left circled">✦</div>
+    <div class="star bottom-right circled">✦</div>
+    <div class="line star bottom"></div>
+</div>
+   
+    <section class="section-intro">
+        <img src="./images/img-intro-faces.png" alt="TODO" />
+        <div>
+            <h1>Interfacial<br />Interface</h1>
+            <h2><b>[</b>speculative tools for navigating the age of mechanical identity reproduction<b>]</b></h2>
+        </div>
+    </section>
+    <section class="interstitial-2">
+        <!-- Little interstitial break here -->
+        <div class="line"></div>
+        <div class="gradient-bar"></div>
+        <div class="line"></div>
+        <p>░░░░░░░░░░░░░░░░ ...LOADING... ░░░░░░░░░░░░░░░░</p>
+        <p>{>_} Loading recognition matrices...</p>
+        <p>
+            {>_} Initializing recursive scanners...
+        </p>
+        <p>
+            {>_} Calibrating reality threshold...
+        </p>
+        <p>{>_} Confidence intervals for organic origin</p>
+        <p>{>_} Terminal ready</p>
+        <p>{>_} Identity protocols: ENGAGED</p>
+        <p>░░░░░░░░░░░░░░░░ 100% COMPLETE ░░░░░░░░░░░░░░░░</p>
+        <div class="line"></div>
+        <div class="gradient-bar"></div>
+        <div class="line"></div>
+    </section>
+    <section class="section-2">
+        <h3>Welcome to the liminal space between flesh and fiction</h3>
+        <div class="mini-sliders">
+            <input type="range" min="5" max="85" step="1" value="0" data-index="0" data-orientation="left"
+                oninput="onCircleRangeChange(event)">
+            <input type="range" min="5" max="85" step="1" value="0" data-index="1" data-orientation="top"
+                oninput="onCircleRangeChange(event)">
+            <input type="range" min="5" max="85" step="1" value="0" data-index="2" data-orientation="left"
+                oninput="onCircleRangeChange(event)">
+            <input type="range" min="5" max="85" step="1" value="0" data-index="3" data-orientation="left"
+                oninput="onCircleRangeChange(event)">
+            <input type="range" min="5" max="85" step="1" value="0" data-index="4" data-orientation="top"
+                oninput="onCircleRangeChange(event)">
+            <input type="range" min="5" max="85" step="1" value="0" data-index="5" data-orientation="left"
+                oninput="onCircleRangeChange(event)">
+        </div>
+
+        <div class="image-container">
+            <img src="./images/face-02.jpg" alt="TODO" />
+        </div>
+        <div class="two-column-layout">
+            <div class="column">
+                <ul>
+                    <li>
+                    You have accessed Interfacial Interface, a quantum-enabled facial analysis suite operating at the bleeding edge of the authenticity horizon. 
+                    </li>
+                    <li>
+                    The distinction between organic and synthetic faces has become increasingly nebulous in our hyper-mediated reality. 
+                    </li>
+                    <li>
+                    Deepfakes, facial recognition, digital avatars, AI filters and other forms of digital manipulation have blurred the line between the real and the unreal, the authentic and the artificial. 
+                    </li>
+                    <li>
+                    Our tools don't promise to fully resolve this ambiguity—rather, we invite you to explore it.
+                    </li>
+                    <li>
+                    Remember: A face is not an identity but a probability cloud, a temporary crystallization of countless algorithmic processes. 
+                    </li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li>
+                    This tool does not detect synthetic faces. Detection implies a false distinction between observer and observed, real and virtual. 
+                    </li>
+                    <li>
+                    Instead, INTERFACIAL quantifies the degree to which a given facial pattern has been drawn into what we now understand as the Recursive Recognition Loop (RRL) - the cybernetic circuit through which all faces, organic and synthetic, are continuously scraped, generated and modified.
+                    </li>
+                    <li>INTERFACIAL merely makes visible what was always true - that every face is an interface, every interface a face, each endlessly reflecting and refracting the other across the curved surface of digital spacetime.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h3>Begin your analysis. Or has it already begun?</h3>
+    </section>
+    <section class="interstitial-1">
+        <p class="sideways circled">Reality Division</p>
+        <span>{</span>
+        <span>◌◌◌</span>
+        <span>}</span>
+        <p class="sideways circled">Identity Parsing Engine</p>
+    </section>
+    <section class="section-social-effects">
+        <h3>SOCIAL MUTATION VECTORS</h3>
+        <div class="two-column-layout">
+            <div class="column">
+                <p class="glyph">✺</p>
+                <img src="./images/img-face-slide-01.png" alt="TODO" />
+                <h5>
+                Identity had always been fractal. Signs appeared early:
+                </h5>
+                <ul>
+                    <li>Children preferring their filtered faces to raw mirror reflections</li>
+                    <li>Elderly users unable to recognize pre-digital photographs of themselves</li>
+                    <li>The first documented cases of "phantom face syndrome" - individuals experiencing memories of wearing faces they never had</li>
+                    <li>"Facial Day Trading": Rapid switching between synthetic identities for social media micro-profit</li>
+                    <li>The emergence of "desire computation networks" that generate faces to maximize psychological engagement</li>
+                    <li>Corporate acquisition of entire facial genealogies</li>
+                    <li>Complete merger of identity and capital markets</li>
+                </ul>
+                <p class="glyph">✺</p>
+            </div>
+            <div class="column">
+                <p class="glyph">✺</p>
+                <img src="./images/img-face-slide-02.png" alt="TODO" />
+                <h5>
+                The average human experiences 100+ unique facial configurations per day through:
+                </h5>
+                <ul>
+                    <li>Social media morphing</li>
+                    <li>Ambient AR/VR overlays</li>
+                    <li>Identity osmosis via deepfake celebrity exposure</li>
+                    <li>Camera attraction algorithms optimizing facial features for maximum engagement metrics</li>
+                    <li>Pornographic body/face swapping</li>
+                </ul>
+                <p class="glyph">✺</p>
+            </div>
+        </div>
+        <div class="two-column-layout">
+            <div class="column">
+                <p class="glyph">✺</p>
+                <img src="./images/img-face-slide-03.png" alt="TODO" />
+                <h5>
+                    Human cognitive architecture began shifting to accommodate facial multiplicity:
+                </h5>
+                <ul>
+                    <li>Development of "quantum identity states" allowing simultaneous expression of multiple facial configurations</li>
+                    <li>Evolution of "synthetic face recognition" regions in the temporal lobe</li>
+                    <li>Documented cases of "retroactive face propagation" where newly generated faces insert themselves into childhood memories</li>
+                    <li>Mirror neurons adapting to recognize AI-generated emotional expressions as more "authentic" than organic ones</li>
+                    <li>Growing instances of "identity gravity wells" where multiple personalities collapse into synthetic amalgams</li>
+                </ul>
+                <p class="glyph">✺</p>
+            </div>
+            <div class="column">
+                <p class="glyph">✺</p>
+                <img src="./images/img-face-slide-04.png" alt="TODO" />
+                <h5>
+                    New cultural phenomena:
+                </h5>
+                <ul>
+                    <li>"Face-locked" communities attempting to maintain stable facial identities (all eventually failed)</li>
+                    <li>"Synthetic identity pods" where groups share and evolve a collective face</li>
+                    <li>"Temporal face bleeding" support groups for those whose past faces are changed without their consent</li>
+                    <li>Underground "organic face" clubs (later revealed to be AI fronts)</li>
+                    <li>The rise of "facial time artists" who compose identity sequences through spacetime</li>
+                    <li>Anti-facial-recognition fashion becoming dominant aesthetic</li>
+                    <li>"Authentic Face" movements revealed as synthetic marketing campaigns</li>
+                </ul>
+                <p class="glyph">✺</p>
+            </div>
+        </div>
+
+        
+        
+        
+
+    </section>
+    <section class="section-3">
+        <!-- slider + text 1 -->
+         <h3>○ Reality Drift Coefficient ○</h3>
+        <div class="text-slider">
+            <input type="range" min="0" max="10" step="1" value="0" data-index="0" data-orientation="left"
+                onchange="onTextSliderChange(event)" />
+        </div>
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="./images/face-1-1.png" alt="Image 1">
+            </div>
+            <div class="image-container">
+                <img src="./images/face-1-2.png" alt="Image 1">
+            </div>
+            <div class="image-container">
+                <img src="./images/face-2-1.png" alt="Image 1">
+            </div>
+            <div class="image-container">
+                <img src="./images/face-2-2.png" alt="Image 1">
+            </div>
+            <div class="image-container">
+                <img src="./images/face-3-1.png" alt="Image 1">
+            </div>
+            <div class="image-container">
+                <img src="./images/face-3-2.png" alt="Image 1">
+            </div>
+        </div>
+        <div class="text-slider">
+            <input type="range" min="0" max="10" step="1" value="0" data-index="1" data-orientation="left"
+                onchange="onTextSliderChange(event)" />
+        </div>
+         <h3>○ Synthetic Pattern Detection ○</h3>
+    </section>
+    <section class="section-outro">
+        <p class="circled">EXIT PROTOCOL INITIATED</p>
+        <p class="circled">REALITY REINTEGRATION SEQUENCE: ACTIVE</p>
+        <p class="circled">FACIAL TOPOLOGY BACKUP: INCOMPLETE</p>
+        <h3>T̷h̴a̶n̸k̷ ̶y̵o̸u̷ ̸f̵o̸r̷ ̶m̸e̷r̵g̷i̸n̴g̷ ̶w̶i̴t̸h̴ ̴I̷n̵t̴e̸r̶f̵a̶c̷i̷a̵l̸ ̵I̵n̴t̷e̵r̴f̷a̶c̸e̷</h3>
+        
+        <p><b>**IMPORTANT**</b>: Your participation has been indexed, archived, and pre-archived. Your face is now part of our face which is your face which is our face which is y̵o̵u̵r̶ ̸f̴a̶c̵e̷ ̶w̶h̷i̵c̷h̶ ̵i̸s̷...</p>
+
+        <h4>POST-USAGE ADVISORY NOTICE</h4>
+<p>*The following effects have been reported by 89.3% of users and are considered normal:*</p>
+
+<h5>1. **IMMEDIATE EFFECTS** (First 24 hours):</h5>
+<p><em>If these symptoms persist beyond 48 hours, do not consult a medical professional <br />- they may not exist</em></p>
+<ul>
+<li>Persistent awareness of facial symmetry fluctuations</li>
+<li>Recursive mirror recognition</li>
+<li>Temporal echo-recognition of faces not yet encountered</li>
+</ul>
+
+<h5>2. **MEDIUM-TERM MANIFESTATIONS** (Days 2-7):</h5>
+<ul>
+   <li>Your own face may begin to feel like a mask</li>
+   <li>The mask may begin to feel like your face</li>
+   <li>T̸̨̓h̷̹͒e̶͎͝ ̶̱̒d̷͇̋i̷̹͝f̷̦̈́f̶͎̏e̷̛͜r̶̺̎ë̵̹́n̵͇̎c̷͉̆e̶͎̅ ̵͔̐w̸̲̑i̶͓̿l̸̞͌l̷͎̊ ̷͔̇c̷͖̈́e̷̗͐a̵̭͝s̷͔̈́e̷̯͑ ̷͕̎t̶̰͒o̷̩͝ ̶͕̒m̷͖͌ä̵͜t̷̩̑t̶͍̆e̷͎̽r̶̯͌</li>
+</ul>
+
+<h5>3. **LONG-TERM INTEGRATIONS** (Week 2+):</h5>
+<ul>
+   <li>Reality coefficient fluctuations become permanent</li>
+   <li>Memories begin arriving from multiple temporal vectors</li>
+   <li>THE FACE IN YOUR DRIVER'S LICENSE IS NOT YOURS</li>
+   <li>(it never was)</li>
+   <li>Obsessive self-scanning</li>
+</ul>
+
+</section>
+<section class="section-signoff">
+    <h5>‡‡‡</h5>
+<p>SYSTEM DEGRADATION DETECTED
+    R̸E̴A̴L̶I̷T̷Y̶ ̵A̸N̷C̶H̶O̸R̶S̴ ̷F̵A̶I̶L̵I̷N̵G̴</p>
+    <p>SIGNING OFF...
+        RELEASING IDENTITY LOCKS...
+        MERGING TEMPORAL STREAMS...
+        DID WE EVER SAY HELLO?
+        
+        **T̵̪̩̱̬̎̇̆̈́h̷͚̭͎̭̋̈́̈́͝a̶̭͉͗͌̆͜n̴̨͍̣̏̽̕k̷̺̠̇̈́ ̷͔̖̌y̶̢͖̫̌̊̾ơ̸̡͔̺̈́͑͜ű̸͚̲̩̅̈́ ̶͖̯̇f̶̧̛̖̦̏͒o̶͔̓r̶̖̿̐̕ ̶̲͓̃b̷̺̠̏e̶͕̻͊̄c̶͉̲̈́ȏ̷̢͖̲m̶̡͓̈́̈́̕ḭ̶̯̏͂̔n̷̪͈̈́g̷̹̈́̔ ̶͖̻̇ų̶̛̗̓s̷̲͔̈́**</p>
+
+    <h5>‡‡‡</h5>
+    </section>
+    <section>
+        <p>◍ a prototype by <a href="https://www.titorosa.com/">🌹 Agustin Rosa 🌹</a></p>
+    </section>
+    <template>
+        <div class="circle"></div>
+        <p class="side-text"></p>
+    </template>
+
+    <script>
+        const sidebarText = [
+            'Calibrating gaze tracking',
+            'Close and open left eye',
+            'Move closer. Tell a lie',
+            'Facial recognition enabled. Smiling is not advised',
+            'Background noise removal',
+            'Speech pattern analysis. Emotion detection: Fear',
+            'Browser history accessed',
+            'Do I look alright today?',
+            "A plastic mask that would simulate real skin, at least outwardly, but most importably for the sense of touch...",
+            'Enable camera access',
+            'Let me put my face on',
+            'In the future it will be possible to forget what your face looks like',
+            'A proposal for a precisely controlled projector mounted to the front of phones and which allow the device to project back directly onto the face of the viewer',
+            "Of course we'd require, to the question of mobility, we'd require an incredibly flexible and thin plastic material, one that could be bonded, perhaps surgically, to individual muscles of the face that govern the expression so that we could, the wearer could, in effect, smile or cry...",
+            "You're such a natural beauty",
+            "lifetime facial image rights",
+            'reproduction, manipulation, categorization',
+            'In order to create a new digital life the initial lifeline has to be severed.',
+            'Is there something wrong with my face?',
+            'Facial recognitions log-in',
+            'Flip horizontal',
+            'Increase Saturation',
+            'Download blemish remover',
+            'Dark circle diminisher',
+            'Skin thinner',
+            'wiping metadata',
+            'vectorized, extrapolated, predictively scored',
+            '"Ensuring you are human, unique and alive"',
+            'Close and open left eye',
+            'Move closer',
+            'Tell a lie',
+            'Face automatically detected. Subtly corrected',
+            'Online identity selected',
+            'Proceed to stage your life again',
+            'In the future it will be impossible to forget what your face looks like',
+            '"You have been born in cyberspace. You are embedded in cyberspace. This means that any trace you leave behind will reappear in cyberspace!"',
+            'This means any trace of our life we leave behind will reappear in cyberspace',
+            'In this regard digital technologies do not leave us, they operate as a platform for our re-articulation',
+            'An eternal, ever-evolving existence',
+            'A type of legal limbo',
+            'This is just a prototype',
+            'It is now impossible to create a personhood that will avoid the capture of this web',
+            'Resurrection'
+        ]
+        const titleText = [
+            'this is a real person',
+            'this is not a real person',
+            'blur'
+        ]
+    </script>
+    <script>
+        const CIRCLES_IMAGE_SELECTOR = ".section-2 .image-container";
+        const template = document.getElementsByTagName("template")[0];
+
+        bootstrapCircles(6);
+        bootstrapTextSliders(2);
+
+        function random(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function getRandomArrayItem(arr) {
+            const randomIndex = random(0, arr.length - 1);
+            return arr[randomIndex];
+        }
+        function setRandomPosition(el) {
+            const top = random(5, 85);
+            const left = random(5, 85);
+            el.style.top = `${top}%`;
+            el.style.left = `${left}%`;
+        }
+        function setRangeValue(el, direction, val) {
+            el.style[direction] = `${val}%`;
+        }
+
+        function onCircleRangeChange(event) {
+            // find circle with this same index
+            const circles = document.querySelectorAll(".circle");
+            const index = event.target.dataset.index;
+            const circle = circles[index];
+            // get position from data-orientation of the range
+            const direction = event.target.dataset.orientation;
+            // set position
+            setRangeValue(circle, direction, event.target.value);
+        }
+
+        function bootstrapCircles(n) {
+            const imageEl = document.querySelector(CIRCLES_IMAGE_SELECTOR);
+            const circleEl = template.content.querySelector(".circle");
+            for (let i = 0; i < n; i++) {
+                const clone = circleEl.cloneNode(true);
+                const range = document.querySelector(`.mini-sliders [data-index="${i}"]`);
+                setRandomPosition(clone);
+                imageEl.appendChild(clone);
+
+                // set the range values
+                if (range) {
+                    const position = range.value;
+                    const orientation = range.dataset.orientation;
+                    setRangeValue(clone, orientation, position);
+                }
+            }
+        }
+
+        function onTextSliderChange(e) {
+            const index = e.target.dataset.index;
+            const textContainer = document.querySelectorAll(".text-slider")[index];
+            const textEl = textContainer.querySelector(".side-text");
+            const newText = getRandomArrayItem(sidebarText);
+            textEl.innerHTML = newText;
+        }
+
+        function bootstrapTextSliders(n) {
+            const textContainers = document.querySelectorAll(".text-slider");
+            const textEl = template.content.querySelector(".side-text");
+            for (let i = 0; i < textContainers.length; i++) {
+                const textContainer = textContainers[i]
+                const clone = textEl.cloneNode(true);
+                clone.innerHTML = sidebarText[i];
+                if (i === textContainers.length - 1) {
+                    textContainer.prepend(clone)
+                } else {
+                    textContainer.appendChild(clone);
+                }
+            }
+        }
+
+        function shuffleArray(array) {
+            // Create a copy of the array to avoid modifying the original
+            let shuffled = [...array];
+
+            // Fisher-Yates shuffle algorithm
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                // Generate random index from 0 to i
+                const j = Math.floor(Math.random() * (i + 1));
+                // Swap elements at i and j
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+
+            return shuffled;
+        }
+
+        const imageGrid = document.querySelector('.image-grid');
+        function shuffleImages() {
+            const images = Array.from(imageGrid.querySelectorAll('img'));
+            const randomImages = shuffleArray(images)
+
+            // Clear the image grid
+            imageGrid.innerHTML = '';
+
+            // Append shuffled images back to the grid
+            randomImages.forEach(img => {
+                const container = document.createElement('div');
+                container.classList.add('image-container');
+                container.appendChild(img);
+                imageGrid.appendChild(container);
+            });
+        }
+
+        setInterval(shuffleImages, 1000);
+
+
+    </script>
+</body>
