@@ -5,11 +5,11 @@ id: home
 permalink: /
 ---
 
-<h2>Objects</h2>
+<h3>Objects</h3>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
 {% assign sorted_pages = site.pages | sort: 'created_at' | reverse %}
 {% for page in sorted_pages %}
-    {% if page.path contains 'projects' and page.show_home == true %}
+    {% if page.path contains 'objects' and page.show_home == true %}
       {% include home-card.html 
           url=page.url 
           title=page.title 
@@ -21,7 +21,7 @@ permalink: /
 {% endfor %}
 </div>
   
-<h2>Editor</h2>
+<h3>Editor</h3>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
 {% for project in site.data.editor %}
     {% include home-card.html 
@@ -33,7 +33,7 @@ permalink: /
 {% endfor %}
 </div>
 
-<h2>Publications</h2>
+<h3>Publications</h3>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
 {% assign sorted_pubs = site.data.publications | sort: 'created_at' %}
 {% for project in sorted_pubs %}
