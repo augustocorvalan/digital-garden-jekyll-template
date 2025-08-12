@@ -16,10 +16,26 @@ images:
 (Mutante + Architecture)
 <br/>
 <br/>
-I began to create sites, makeshift structures, shape-shifters. Made of bambu and string, these improvised forms can be untied and retied, put together or taken apart. Mutantechitecture comes together in spontaneous motions that involve the body, floor, ceiling and light. The materials self-organize into a precarious, site-specific architecture.
+I chose bamboo because it is strong but flexible, naturally waterproof and fire-
+resistant, and abundant but frequently unwanted (the bamboo for this project
+was salvaged from private owners in the process of discarding it). I utilize a
+variety of traditional knots to investigate speculative building techniques for
+this sustainable material, with particular interest in the field of public art. My
+goal is to inspire individuals who might perceive public sculpture as financially
+out-of-reach, by prototyping cost-effective and sustainable materials.
 <br/>
 <br/>
-You enter into a type of symbiosis: The object folds and unfolds at your touch, revealing new configurations. If energized mutantechitecture enters into dynamic partnership with the body, the ground, its own network of material pull and give. Tension extends in all directions to create networks of forces that counterbalance each other.
+As Mutantechitecture navigates the interplay of adaptation and mutation
+it becomes a manifestation for the delicate dance of assimilation and
+resiliency inherent in my experience as a Latine artist living in Maryland.
+Mutantechitecture is nomadic, able to shift and adapt to different settings,
+some times blending in and some times sticking out, embodying the
+adaptability required to navigate varied environments. Just as these objects
+can integrate or assert their presence, so does my hybrid identity weave
+between spaces, absorbing diverse influences while retaining its distinct core.
 <br/>
 <br/>
-If tired the mutantechitecture is left to rest, in that moment of rest emerges an inconclusive configuration, always in the making, prone to unexpected form, at the edge of becoming something different. It stays always within the interval, the in-between. Where does the mutante end and I begin?
+As I delve deeper into this exploration, Mutantechitecture evolves not just as
+a personal reflection but as a shared conversation—prompting reflections
+on the fluidity of identity and the power of creative expression in shaping
+collective narratives.
