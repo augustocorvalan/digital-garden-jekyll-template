@@ -16,6 +16,7 @@ layout: default
         <p class="m-0 italic text-sm">{{ page.materials }}</p>
         <p class="m-0 italic text-sm">{{ page.size }}</p>
     </div>
+    {% if page.images.size > 0 %}
     <div class="my-16">
         <h3 class="uppercase">Installation Views</h3>
         <div class="flex w-full justify-center">
@@ -26,6 +27,7 @@ layout: default
             </div>
         </div>
     </div>
+    {% endif %}
       {{ content }}
     </content>
   </div>
