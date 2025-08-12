@@ -3,7 +3,7 @@ layout: exhibit
 title: Out of Order
 gallery_name: Maryland Art Place
 gallery_url: https://www.promotionandarts.org/events/out-of-order-ooo/
-show_date: 2024
+show_date: April 19, 2024
 images:
 ---
 
