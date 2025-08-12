@@ -35,20 +35,36 @@ If you don't care about the graph, you can simply remove it from this layout, [a
 
 Source code is available under the [MIT license](20%20Professional/[21]%20Portfolio/portfolio-site-2/node_modules/arg/LICENSE.md).
 
+# Local development
+
+- cd into project folder - `Portfolio-Web`
+- run `bundle install` to install Gem dependencies
+- run `yarn install` to install JS dependencies
+- run `bundle exec jekyll serve` to start the local server
+- open your browser and go to `http://localhost:4000`
+
 # Work in Progress
 
 ### Global
 
--   Add News page
--   Typography
--   Add Publications
--   Add Curations
--   Add Residencies?
+- Add Objects page that lists all sculpture and art projects 
+- Add Editor page that lists all editorial projects
+- Add Publications page that lists all writing and electronic literature projects 
+- Add links in home page to all the above pages
+- Make sure home page only displays "featrured" projects
+- Add CV page that lists all exhibitions, awards, and residencies
+- Add nav
+
 
 ### Home Page
 
--   Add featured projects
-    -   Diagrammatic Poems
+- Add intro text with links
+-   Add projects
+    - Diagrammatic Poems
+    - Let's Go Somewhere Else (Neon)
+    - Lunar Landscapes
+    - Bocas
+    - Bamboo paper pulp stick piece (name?)  
 
 # Resources
 
