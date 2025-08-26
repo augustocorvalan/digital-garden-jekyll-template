@@ -1,6 +1,6 @@
 ---
 layout: exhibit
-title: The Museum of Human Touch
+title: The Museum of Human Touch Solo Show
 gallery_name: Persons Unknown Gallery
 gallery_url: https://www.personsunknowngallery.com/events/the-museum-of-human-touch-works-by-agustin-rosa
 show_date: August 16th – September 7th, 2025
