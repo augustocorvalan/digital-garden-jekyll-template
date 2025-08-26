@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Speculative Touch Interface (Finger)
-description: speculative hybrid anatomy
+description: hybrid anatomy
 created_at: 2025-06-01
 materials: Paper pulp, acrylic, fake nails, electrical wiring, keyboard
 size: 17" x 6" x 8"

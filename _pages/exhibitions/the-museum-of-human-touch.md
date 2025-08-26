@@ -13,9 +13,13 @@ images:
 
 What does it mean to be a body shaped by screens? 
 
-The Museum of Human Touch is a speculative fiction project from an imagined future where intimacy with our devices has deepened into full codependence. In this future, screens have replaced direct experience and our connections, to each other and to our own bodies, have thinned into abstraction.
+The Museum of Human Touch is a speculative fiction project from an imagined future where intimacy with our devices has deepened into full codependence. In this future, screens have replaced direct experience and our connections, to our bodies and others, have thinned into abstraction.
 
-The Museum confronts this question by creating hybrid machine-body interfaces from consumer waste, such as mashed shipping materials and obsolete tech, to reveal how digital culture profoundly transform our bodies and identities. Informed by glitch theory, it celebrates a fluid, mutant embodiment, proposing a remix where the body is not a fixed product but an always becoming.
+The Museum acts as an archive, presenting unearthed machine-body interfaces from this near-far future. These artifacts are designed to suggest the eroticism and ambivalence of interface: the libidinal pleasure of caressing a screen, the seduction of a device that always responds. But also the violence of that contact, the way interface surveils, flattens and remakes our bodies and identities.
+
+The interfaces are crafted by remixing the debris of digital consumerism. Mashed packaging materials and spray foam serve as new skin that envelops obsolete gadgets, medical tubing and digitally printed body parts. This deliberate material manipulation glitch-disrupts the relentless logic of global commerce by transforming the mundane refuse of consumer culture into vibrant prosthetics that provoke new bodily imaginaries.
+
+Informed by glitch feminism and transhuman theory, the work resists fixed categories. It practices an embodiment that is fluid, prosthetic and mutant. As digital oligarchies reprogram what it means to be human, the Museum offers new anarchitectures of selfhood: messy, layered and sticky. The body not as a fixed product but as an always becoming.
 
 <hr/>
 <h3 class="uppercase">Works</h3>
