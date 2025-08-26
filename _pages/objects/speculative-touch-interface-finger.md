@@ -2,8 +2,8 @@
 layout: project
 title: Speculative Touch Interface (Finger)
 description: speculative hybrid anatomy
-created_at: 2025
-materials: Paper pulp and acrylic
+created_at: 2025-06-01
+materials: Paper pulp, acrylic, fake nails, electrical wiring, keyboard
 size: 17" x 6" x 8"
 show_home: true
 thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-finger-03.png
@@ -13,7 +13,7 @@ images:
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-finger-03.png
 ---
 
-Speculative Touch Interfaces invite us to reconsider the boundaries of our bodies and the technologies we create. They challenge us to imagine new forms of intimacy and connection in an increasingly digtized world.
+The Speculative Touch Interface invites us to reconsider the boundaries of our bodies and the technologies we create. It challenges us to imagine new forms of intimacy and connection in an increasingly digitized world.
 
 As reality becomes profoundly mediated by techno-interfaces, intensifying alienation from human touch, this speculative anatomies ask what is lost and gained when screens and interfaces intercede in the majority of our interactions and relationships, intensifying alienation from our bodies and human touch.
 
@@ -23,4 +23,6 @@ This is sculpture as anarchitecture, striving for "oozing, challenging bodies fu
 
 **Speculative Touch Interface Series:**
 
-- [Speculative Touch Interface (Bone)](/objects/speculative-touch-interface-bone)
+- [Speculative Touch Interface (Bone)](/speculative-touch-interface-bone)
+- [Speculative Touch Interface (Hair)](/speculative-touch-interface-hair)
+- [Speculative Touch Interface (CCTV)](/speculative-touch-interface-cctv)
