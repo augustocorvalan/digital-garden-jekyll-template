@@ -1,8 +1,10 @@
-<a href="{{ include.url }}" class="disable-link-style group relative block sm:h-80 lg:h-96">
-    <div class="relative flex h-full transform items-center bg-white transition-transform">
-        <div class="p-4 lg:pt-0 transition-opacity sm:p-6">
-            <img src="{{ include.image_url }}" alt="" class="h-56 m-0 object-cover object-top">
-            <h2 class="m-0 mt-2 text-xl font-medium sm:text-2xl">{{ include.title }}</h2>
+<a href="{{ include.url }}" class="disable-link-style group relative block">
+    <div class="relative flex h-full transform flex-col bg-white transition-transform">
+        <div class="aspect-[3/4] w-full overflow-hidden">
+            <img src="{{ include.image_url }}" alt="" class="h-full w-full object-cover object-top">
+        </div>
+        <div class="flex-1 p-4 lg:pt-4 transition-opacity sm:p-6">
+            <h2 class="m-0 text-xl font-medium sm:text-2xl">{{ include.title }}</h2>
             <p class="m-0 text-sm sm:text-base">
                 {{ include.description }}
             </p>
