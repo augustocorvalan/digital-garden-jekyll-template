@@ -2,6 +2,7 @@
 layout: exhibit
 title: Frosh Week
 gallery_name: xoxo goxxip girl
+gallery_location: Baltimore, MD
 gallery_url: https://www.facebook.com/story.php/?story_fbid=122122365632519086&id=61565572583879
 show_date: November 7 - December 12, 2024 
 images:

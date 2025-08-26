@@ -2,6 +2,7 @@
 layout: exhibit
 title: MICA Grad Show
 gallery_name: Maryland College Institute of Art
+gallery_location: Baltimore, MD
 gallery_url: https://2022.micagradshow.com/details/recm2eEAjdI3IyNNK
 show_date: June 22nd – July 9th, 2022
 images:

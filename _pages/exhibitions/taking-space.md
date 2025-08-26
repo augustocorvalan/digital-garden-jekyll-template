@@ -2,6 +2,7 @@
 layout: exhibit
 title: Taking Space
 gallery_name: Creative Alliance
+gallery_location: Baltimore, MD
 gallery_url: https://creativealliance.org/event/taking-space-exhibition/
 show_date: September 1 - October 21, 2023
 images:

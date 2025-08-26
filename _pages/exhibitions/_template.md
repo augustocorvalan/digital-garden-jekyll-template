@@ -10,6 +10,7 @@ Frontmatter: The file must begin with a YAML frontmatter section enclosed in tri
 layout: Set this to exhibit.
 title: The title of the exhibition.
 gallery_name: The name of the gallery or hosting organization.
+gallery_location: The physical location of the gallery (city, state/country).
 gallery_url: The full URL to the exhibition's webpage.
 show_date: The date or date range of the exhibition.
 images: A YAML list of strings, where each string is the path to an image. Image paths should start with images.

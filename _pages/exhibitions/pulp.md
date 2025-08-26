@@ -2,6 +2,7 @@
 layout: exhibit
 title: PULP
 gallery_name: The Art Center Highland Park
+gallery_location: Chicago, IL
 gallery_url: https://theartcenterhp.org/exhibitions/
 show_date: June 21 – August 10, 2024
 images:
