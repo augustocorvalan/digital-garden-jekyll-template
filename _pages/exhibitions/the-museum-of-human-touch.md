@@ -21,5 +21,5 @@ The Museum confronts this question by creating hybrid machine-body interfaces fr
 <p><a class="internal-link" href="/speculative-touch-interface-finger">Speculative Touch Interface (Finger)</a></p>
 <p><a class="internal-link" href="/speculative-touch-interface-bone">Speculative Touch Interface (Bone)</a></p>
 <p><a class="internal-link" href="/speculative-touch-interface-hair">Speculative Touch Interface (Hair)</a></p>
-<p><a class="internal-link" href="/speculative-touch-interface-cctv">Spec
+<p><a class="internal-link" href="/speculative-touch-interface-cctv">Speculative Touch Interface (CCTV)</a></p>
 <hr/>
