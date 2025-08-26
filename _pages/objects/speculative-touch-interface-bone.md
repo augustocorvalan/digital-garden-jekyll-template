@@ -6,7 +6,7 @@ created_at: 2025
 materials: Paper pulp, acrylic, glue, plexiglass, x-ray printout
 size: 37" x 14" x 4"
 show_home: true
-thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-bone-01.png
+thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-bone-03.png
 images:
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-bone-01.png
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-bone-02.png
