@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Disallow crawling of administrative and build files
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_sass/
+Disallow: /_plugins/
+Disallow: /_data/
+Disallow: /_site/
+Disallow: /assets/
+Disallow: /.jekyll-cache/
+Disallow: /node_modules/
+
+# Disallow template and verification files
+Disallow: /*_template.md
+Disallow: /google3cba647566f8c785.html
+
+# Point to sitemap
+Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml

@@ -1,0 +1,70 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Main Pages -->
+  {% for page in site.pages %}
+    {% unless page.path contains 'google3cba647566f8c785.html' or page.path contains '_template.md' or page.path contains '404.html' %}
+      {% if page.url != '/index.html' and page.url != '/' %}
+        <url>
+          <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | remove: 'index.html' }}</loc>
+          {% if page.date %}
+            <lastmod>{{ page.date | date: '%Y-%m-%d' }}</lastmod>
+          {% else %}
+            <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+          {% endif %}
+          {% if page.layout == 'page' %}
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+          {% elsif page.layout == 'exhibit' or page.layout == 'project' %}
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
+          {% else %}
+            <changefreq>monthly</changefreq>
+            <priority>0.7</priority>
+          {% endif %}
+        </url>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Collection Pages (Notes/Projects) -->
+  {% for note in site.notes %}
+    {% unless note.draft == true %}
+      <url>
+        <loc>{{ site.url }}{{ site.baseurl }}{{ note.url }}</loc>
+        {% if note.date %}
+          <lastmod>{{ note.date | date: '%Y-%m-%d' }}</lastmod>
+        {% else %}
+          <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+        {% endif %}
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    {% endunless %}
+  {% endfor %}
+
+  <!-- Posts (if any) -->
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+      <lastmod>{{ post.date | date: '%Y-%m-%d' }}</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  {% endfor %}
+
+</urlset>
