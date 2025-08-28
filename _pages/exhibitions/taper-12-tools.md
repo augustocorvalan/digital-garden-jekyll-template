@@ -5,8 +5,8 @@ gallery_name: Taper Magazine
 gallery_url: https://taper.badquar.to/12/
 show_date: May 2024
 images:
-    - /assets/images/publications/taper-12-01.png
-    - /assets/images/publications/taper-12-02.png
+    - /assets/images/writings/taper-12-01.png
+    - /assets/images/writings/taper-12-02.png
 ---
 
 <hr/>

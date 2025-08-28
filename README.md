@@ -49,7 +49,7 @@ Source code is available under the [MIT license](20%20Professional/[21]%20Portfo
 
 - Add Objects page that lists all sculpture and art projects 
 - Add Editor page that lists all editorial projects
-- Add Publications page that lists all writing and electronic literature projects 
+- Add Writings page that lists all writing and electronic literature projects 
 - Add links in home page to all the above pages
 - Make sure home page only displays "featrured" projects
 - Add CV page that lists all exhibitions, awards, and residencies

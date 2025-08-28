@@ -33,9 +33,9 @@ permalink: /
 {% endfor %}
 </div>
 
-<h3>Publications</h3>
+<h3>Writings</h3>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% assign sorted_pubs = site.data.publications | sort: 'created_at' %}
+{% assign sorted_pubs = site.data.writings | sort: 'created_at' %}
 {% for project in sorted_pubs %}
     {% include home-card.html 
         url=project.link 

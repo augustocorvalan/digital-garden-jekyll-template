@@ -13,8 +13,8 @@ _*Archive*_
 
 [LINK](https://www.thismuch.org/2023)
 
-<img src="/assets/img/publications/thismuch-love-poems/thismuch-1.png">
-<img src="/assets/img/publications/thismuch-love-poems/thismuch-2.png">
+<img src="/assets/img/writings/thismuch-love-poems/thismuch-1.png">
+<img src="/assets/img/writings/thismuch-love-poems/thismuch-2.png">
 
 1.
 
