@@ -4,8 +4,6 @@ show_home: false
 title: Extremely Constained Notepad
 description: word processor with amnesia
 created_at: 2024
-materials: Interactive website, single-channel video
-size: variable
 thumbnail: assets/images/extremely-constrained-notepad/thumbnail.png
 images:
     - /assets/images/extremely-constrained-notepad/thumbnail.png
