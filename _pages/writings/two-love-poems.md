@@ -1,8 +1,9 @@
 ---
 layout: project
 title: Two Love Poems
-description: Two love poems exploring intimacy and consumption
+description: intimacy & consumption
 created_at: 2023
+publication_link: https://www.thismuch.org/2023
 show_home: true
 thumbnail: assets/images/writings/thismuch-love-poems/thismuch-1.png
 images:
@@ -10,9 +11,7 @@ images:
     - /assets/images/writings/thismuch-love-poems/thismuch-2.png
 ---
 
-_Two Love poems_ was published in [thismuch.org](https://www.thismuch.org/2023) in February 2023.
-
-## Archive
+## Archive Version
 
 1.
 

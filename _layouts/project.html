@@ -6,6 +6,9 @@ layout: default
   <div>
     <h1>{{ page.title }}</h1>
     <h2>{{ page.description }}</h2>
+    {% if page.publication_link %}
+    <p class="my-2"><a href="{{ page.publication_link }}" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Read Here</a></p>
+    {% endif %}
   </div>
 
   <div id="notes-entry-container">
@@ -33,6 +36,23 @@ layout: default
       <h3 style="margin-bottom: 1em">Exhibitions</h3>
       <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
         {% for backlink in exhibition_backlinks %}
+          <div class="backlink-box">
+            <a class="internal-link" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a><br>
+            <span>{{ backlink.gallery_name }}</span>
+            <br/>
+            <span class="text-slate-400">{{ backlink.show_date }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </side>
+    {% endif %}
+
+    {% assign publication_backlinks = page.backlinks | where_exp: "item", "item.path contains 'publications'" %}
+    {% if publication_backlinks.size > 0 %}
+    <side style="font-size: 0.9em">
+      <h3 style="margin-bottom: 1em">Publications</h3>
+      <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(1fr);">
+        {% for backlink in publication_backlinks %}
           <div class="backlink-box">
             <a class="internal-link" href="{{ site.baseurl }}{{ backlink.url }}{%- if site.use_html_extension -%}.html{%- endif -%}">{{ backlink.title }}</a><br>
             <span>{{ backlink.gallery_name }}</span>

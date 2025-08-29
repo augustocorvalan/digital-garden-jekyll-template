@@ -35,14 +35,16 @@ permalink: /
 
 <h3>Writings</h3>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% assign sorted_pubs = site.data.writings | sort: 'created_at' %}
-{% for project in sorted_pubs %}
-    {% include home-card.html 
-        url=project.link 
-        title=project.title 
-        image_url=project.image_url 
-        date=project.date
-        description=project.publisher
-    %}
+{% assign sorted_pages = site.pages | sort: 'created_at' | reverse %}
+{% for page in sorted_pages %}
+    {% if page.path contains 'writings' and page.show_home == true %}
+      {% include home-card.html 
+          url=page.url 
+          title=page.title 
+          image_url=page.thumbnail
+          description=page.description 
+          date=page.created_at
+      %}
+    {% endif %}
 {% endfor %}
 </div>
