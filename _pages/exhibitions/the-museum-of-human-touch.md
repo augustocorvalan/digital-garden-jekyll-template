@@ -23,6 +23,8 @@ Informed by glitch feminism and transhuman theory, the work resists fixed catego
 
 <hr/>
 <h3 class="uppercase">Works</h3>
+<p><a class="internal-link" href="/intimate-data-collector">Intimate Data Collector</a></p>
+<p><a class="internal-link" href="/my-other-bodies-writer">My Other Bodies (Writer)</a></p>
 <p><a class="internal-link" href="/speculative-touch-interface-finger">Speculative Touch Interface (Finger)</a></p>
 <p><a class="internal-link" href="/speculative-touch-interface-bone">Speculative Touch Interface (Bone)</a></p>
 <p><a class="internal-link" href="/speculative-touch-interface-hair">Speculative Touch Interface (Hair)</a></p>

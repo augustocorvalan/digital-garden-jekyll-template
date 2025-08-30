@@ -1,7 +1,7 @@
 ---
 layout: project
 show_home: true
-title: Extremely Constained Notepad
+title: Extremely Constrained Notepad
 description: word processor with amnesia
 created_at: 2024
 publication_link: https://taper.badquar.to/12/extremely_constrained_notepad.html

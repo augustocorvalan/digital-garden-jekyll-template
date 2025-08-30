@@ -14,7 +14,15 @@ layout: default
   <div id="notes-entry-container">
     <content>
     <div class="my-4">
-        <p class="m-0 italic text-sm">{{ page.created_at }}</p>
+        <p class="m-0 italic text-sm">
+        {% assign date_string = page.created_at | strip %}
+        {% if date_string contains "-" %}
+            {% assign date_parts = date_string | split: "-" %}
+            {{ date_parts[0] }}
+        {% else %}
+            {{ date_string }}
+        {% endif %}
+        </p>
         <p class="m-0 italic text-sm">{{ page.materials }}</p>
         <p class="m-0 italic text-sm">{{ page.size }}</p>
     </div>

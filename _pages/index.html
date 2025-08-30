@@ -5,7 +5,11 @@ id: home
 permalink: /
 ---
 
-<h3>Objects</h3>
+<div class="text-2xl md:text-3xl lg:text-4xl font-light leading-relaxed my-16 text-gray-800">
+  My name is Agustin Rosa. I am an <a href="#objects">artist</a>, <a href="#writings">writer</a>, <a href="#editor">editor</a> and curator.
+</div>
+
+<h2 id="objects" class="text-5xl mt-18 uppercase border-solid border-0 border-l-4 border-red-500 pl-4">Objects</h2>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
 {% assign sorted_pages = site.pages | sort: 'created_at' | reverse %}
 {% for page in sorted_pages %}
@@ -20,20 +24,8 @@ permalink: /
     {% endif %}
 {% endfor %}
 </div>
-  
-<h3>Editor</h3>
-<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% for project in site.data.editor %}
-    {% include home-card.html 
-        url=project.link 
-        title=project.title 
-        image_url=project.image_url 
-        date=project.date
-    %}
-{% endfor %}
-</div>
 
-<h3>Writings</h3>
+<h2 id="writings" class="text-5xl mt-18 uppercase border-solid border-0 border-l-4 border-red-500 pl-4">Writings</h2>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
 {% assign sorted_pages = site.pages | sort: 'created_at' | reverse %}
 {% for page in sorted_pages %}
@@ -46,5 +38,17 @@ permalink: /
           date=page.created_at
       %}
     {% endif %}
+{% endfor %}
+</div>
+
+<h2 id="editor" class="text-5xl mt-18 uppercase border-solid border-0 border-l-4 border-red-500 pl-4">Editor</h2>
+<div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+{% for project in site.data.editor %}
+    {% include home-card.html 
+        url=project.link 
+        title=project.title 
+        image_url=project.image_url 
+        date=project.date
+    %}
 {% endfor %}
 </div>
