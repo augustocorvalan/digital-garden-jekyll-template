@@ -6,6 +6,9 @@ gallery_location: Los Angeles, CA
 gallery_url: https://www.personsunknowngallery.com/events/non-stop-gaze-research-unit
 show_date: March 21st – April 19th, 2026
 images:
+    - /assets/images/non-stop-gaze-research-unit/non-stop-gaze-research-unit-01.jpg
+    - /assets/images/non-stop-gaze-research-unit/non-stop-gaze-research-unit-02.jpg
+    - /assets/images/non-stop-gaze-research-unit/non-stop-gaze-research-unit-03.jpg
 ---
 
 <hr/>
@@ -20,5 +23,6 @@ Taken together, the works in this exhibition ask what it means to be recognized 
 
 <hr/>
 <h3 class="uppercase">Works</h3>
+<p><a class="internal-link" href="/tentacular-hypermaterialism-i">Tentacular Hypermaterialism I</a></p>
 <p><a class="internal-link" href="/tentacular-hypermaterialism-ii">Tentacular Hypermaterialism II</a></p>
 <hr/>
