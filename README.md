@@ -8,15 +8,25 @@ The vault side of the workflow (project folders, inbox notes, checklists) lives 
 
 ## Local development
 
-Needs Ruby 3.2.1 (`.ruby-version`); the macOS system Ruby (2.6) is too old for Jekyll 4.3.
+Needs Ruby 3.2.1 (`.ruby-version`); the macOS system Ruby (2.6) is too old for Jekyll 4.3. Ruby is managed with rbenv (installed via Homebrew), which picks up `.ruby-version` automatically once your shell has `eval "$(rbenv init - zsh)"` in `~/.zshrc`.
+
+One-time setup on a new machine:
 
 ```bash
+brew install rbenv ruby-build libyaml
+rbenv install 3.2.1
+gem install bundler:2.2.3
 bundle install
-yarn install
+npm install   # PostCSS/Tailwind deps (node_modules)
+```
+
+Run:
+
+```bash
 bundle exec jekyll serve
 ```
 
-Then open http://localhost:4000. Always run Jekyll from this folder (the site root), never from inside `_pages/` — doing so leaves stray `.jekyll-cache/` and `_site/` folders in the content tree.
+Then open http://localhost:4000. jekyll-postcss starts a small Node server that shuts down when stdin closes, so run Jekyll from a normal terminal (from scripts, use `bundle exec jekyll build < <(sleep 300)`). Always run Jekyll from this folder (the site root), never from inside `_pages/` — doing so leaves stray `.jekyll-cache/` and `_site/` folders in the content tree.
 
 ## Where things live
 
