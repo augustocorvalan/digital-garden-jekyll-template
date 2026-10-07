@@ -19,4 +19,4 @@ It explores the uneasy synthesis of human and machine, and the corporate AI syst
 >
 > — from the Museum Mission Statement
 
-The book was shown alongside the sculptures in <a class="internal-link" href="/the-museum-of-human-touch">The Museum of Human Touch</a> solo show at Persons Unknown Gallery, Los Angeles, 2025.
+Published by <a href="https://deadalivemagazine.com">Dead Alive Press</a>. The book was shown alongside the sculptures in <a class="internal-link" href="/the-museum-of-human-touch">The Museum of Human Touch</a> solo show at Persons Unknown Gallery, Los Angeles, 2025.
