@@ -9,10 +9,11 @@ permalink: /
   My name is Agustin Rosa. I am an <a href="#objects">artist</a>, <a href="#writings">writer</a>, <a href="#editor">editor</a> and curator.
 </div>
 
+{% comment %} created_at mixes years (2026) and dates (2025-07-01); sorting them as text keeps newest first. {% endcomment %}
 <h2 id="objects" class="text-5xl mt-18 uppercase border-solid border-0 border-l-4 border-red-500 pl-4">Objects</h2>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% assign sorted_pages = site.pages | sort: 'created_at' | reverse %}
-{% for page in sorted_pages %}
+{% assign sorted_groups = site.pages | where_exp: "p", "p.show_home == true" | group_by_exp: "p", "p.created_at | append: ''" | sort: 'name' | reverse %}
+{% for group in sorted_groups %}{% for page in group.items %}
     {% if page.path contains 'objects' and page.show_home == true %}
       {% include home-card.html 
           url=page.url 
@@ -22,13 +23,13 @@ permalink: /
           date=page.created_at
       %}
     {% endif %}
-{% endfor %}
+{% endfor %}{% endfor %}
 </div>
 
 <h2 id="writings" class="text-5xl mt-18 uppercase border-solid border-0 border-l-4 border-red-500 pl-4">Writings</h2>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% assign sorted_pages = site.pages | sort: 'created_at' | reverse %}
-{% for page in sorted_pages %}
+{% assign sorted_groups = site.pages | where_exp: "p", "p.show_home == true" | group_by_exp: "p", "p.created_at | append: ''" | sort: 'name' | reverse %}
+{% for group in sorted_groups %}{% for page in group.items %}
     {% if page.path contains 'writings' and page.show_home == true %}
       {% include home-card.html 
           url=page.url 
@@ -38,7 +39,7 @@ permalink: /
           date=page.created_at
       %}
     {% endif %}
-{% endfor %}
+{% endfor %}{% endfor %}
 </div>
 
 <h2 id="editor" class="text-5xl mt-18 uppercase border-solid border-0 border-l-4 border-red-500 pl-4">Editor</h2>
