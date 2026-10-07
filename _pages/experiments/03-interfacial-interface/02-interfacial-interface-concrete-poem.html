@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Concrete Poem</title>
+    <style>
+        :root {
+            --bg: #000000;
+            --fg: #ffffff;
+            --controls-height: 3rem;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--fg);
+            text-transform: lowercase;
+            font-size: 0.875rem;
+            text-align: justify;
+        }
+
+        .controls {
+            height: var(--controls-height);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0 1rem;
+            background: var(--fg);
+            color: var(--bg);
+        }
+
+        .controls__group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .controls__input {
+            background: transparent;
+            color: inherit;
+            border: 1px solid currentColor;
+            padding: 0.25rem 0.5rem;
+            width: 7.5rem;
+        }
+
+        .controls__input--num {
+            width: 4rem;
+        }
+
+        .controls__input::placeholder {
+            color: inherit;
+            opacity: 0.7;
+        }
+
+        .poems {
+            display: grid;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .poem {
+            display: grid;
+            height: calc(100vh - var(--controls-height));
+            grid-template-rows: repeat(4, 1fr);
+            grid-auto-flow: column;
+            align-items: stretch;
+            gap: 0.25rem 1rem;
+        }
+
+        .poem__phrase {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(0, 1fr);
+            gap: 0.5rem;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .poem__rep {
+            margin: 0;
+        }
+
+        .poem__rep--33 {
+            opacity: 0.33;
+        }
+
+        .poem__rep--75 {
+            opacity: 0.75;
+        }
+
+        .poem__rep--50 {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="controls">
+        <div class="controls__group">
+            <label for="bg-input">bg</label>
+            <input class="controls__input" id="bg-input" name="bg" inputmode="text" autocomplete="off"
+                spellcheck="false" placeholder="#000000" />
+        </div>
+        <div class="controls__group">
+            <label for="fg-input">text</label>
+            <input class="controls__input" id="fg-input" name="fg" inputmode="text" autocomplete="off"
+                spellcheck="false" placeholder="#ffffff" />
+        </div>
+        <div class="controls__group">
+            <label for="repeat-input">repeat</label>
+            <input class="controls__input controls__input--num" id="repeat-input" name="repeat" type="number" min="1"
+                step="1" inputmode="numeric" autocomplete="off" />
+        </div>
+    </header>
+
+    <main class="poems">
+        <section class="poem" data-poem="1"></section>
+        <section class="poem" data-poem="2"></section>
+    </main>
+
+    <script>
+        const poem1 = [
+            'Move closer. Tell a lie',
+            'Do I look alright today?',
+            'Let me put my face on',
+            'In the future it will be possible to forget what your face looks like',
+            'A plastic mask that would simulate real skin, at least outwardly,',
+            ' but most importably for the sense of touch...',
+            'that could be bonded, perhaps surgically,',
+            "You're such a natural beauty",
+            'reproduction, manipulation',
+            'In order to create a new digital life',
+            'the initial lifeline has to be severed.',
+            'Is there something wrong with my face?',
+            'Close and open left eye',
+            'Move closer',
+            'Tell a lie',
+            'Proceed to stage your life again',
+        ];
+
+        const poem2 = [
+            'you are not a real person',
+            'You have been born in cyberspace.',
+            'You are embedded in cyberspace.',
+            'This means that any trace you leave behind',
+            'will reappear in cyberspace',
+            'This means any trace of our life',
+            'will reappear in cyberspace',
+            'In this regard digital technologies do not leave us',
+            'they operate as a platform for our re-articulation',
+            'An eternal, ever-evolving existence',
+            'A type of legal limbo',
+            'This is just a prototype',
+            'It is now impossible to create a personhood',
+            'that will avoid the capture of this web',
+            'you have been born in cyberspace,',
+            'you are a real person',
+        ];
+
+
+
+
+        const poem1Container = document.querySelector('[data-poem="1"]');
+        const poem2Container = document.querySelector('[data-poem="2"]');
+        let repeatCount = 5;
+
+        function renderPoem(lines, container, count) {
+            container.textContent = '';
+
+            let repIndex = 0;
+
+            lines.forEach((line) => {
+                const phrase = document.createElement('div');
+                phrase.className = 'poem__phrase';
+
+                for (let i = 0; i < count; i++) {
+                    repIndex += 1;
+                    const p = document.createElement('p');
+                    p.className = 'poem__rep';
+                    if (repIndex % 26 === 0) p.classList.add('poem__rep--50');
+                    else if (repIndex % 5 === 0) p.classList.add('poem__rep--33');
+                    else if (repIndex % 7 === 0) p.classList.add('poem__rep--75');
+                    p.textContent = line;
+                    phrase.appendChild(p);
+                }
+
+                container.appendChild(phrase);
+            });
+        }
+
+        function renderAll() {
+            renderPoem(poem1, poem1Container, repeatCount);
+            renderPoem(poem2, poem2Container, repeatCount);
+        }
+
+        function normalizeHex(value) {
+            const trimmed = value.trim();
+            const hex = trimmed.startsWith('#') ? trimmed.slice(1) : trimmed;
+            if (!/^[0-9a-fA-F]{6}$/.test(hex)) return null;
+            return `#${hex.toLowerCase()}`;
+        }
+
+        function setTheme({ bg, fg }) {
+            if (bg) document.documentElement.style.setProperty('--bg', bg);
+            if (fg) document.documentElement.style.setProperty('--fg', fg);
+        }
+
+        const bgInput = document.getElementById('bg-input');
+        const fgInput = document.getElementById('fg-input');
+        const repeatInput = document.getElementById('repeat-input');
+
+        bgInput.value = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim();
+        fgInput.value = getComputedStyle(document.documentElement).getPropertyValue('--fg').trim();
+        repeatInput.value = String(repeatCount);
+
+        bgInput.addEventListener('input', (e) => {
+            const bg = normalizeHex(e.target.value);
+            if (bg) setTheme({ bg });
+        });
+
+        fgInput.addEventListener('input', (e) => {
+            const fg = normalizeHex(e.target.value);
+            if (fg) setTheme({ fg });
+        });
+
+        repeatInput.addEventListener('input', (e) => {
+            const next = Number.parseInt(e.target.value, 10);
+            if (!Number.isFinite(next) || next < 1) return;
+            repeatCount = next;
+            renderAll();
+        });
+
+        renderAll();
+    </script>
+</body>
+
+</html>
