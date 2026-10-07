@@ -55,7 +55,7 @@ layout: default
     </side>
     {% endif %}
 
-    {% assign publication_backlinks = page.backlinks | where_exp: "item", "item.path contains 'publications'" %}
+    {% assign publication_backlinks = page.backlinks | where_exp: "item", "item.path contains 'writings'" | where_exp: "item", "item.layout == 'exhibit'" %}
     {% if publication_backlinks.size > 0 %}
     <side style="font-size: 0.9em">
       <h3 style="margin-bottom: 1em">Publications</h3>
