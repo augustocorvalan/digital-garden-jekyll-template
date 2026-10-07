@@ -1,0 +1,20 @@
+---
+layout: project
+title: Tentacular Hypermaterialism I
+description: altered smartphone sculpture
+created_at: 2026
+materials: Smartphone, tape, paper pulp, watercolor
+size: variable
+show_home: true
+thumbnail: /assets/images/tentacular-hypermaterialism-i/tentacular-hypermaterialism-i-thumbnail.jpg
+images:
+    - /assets/images/tentacular-hypermaterialism-i/tentacular-hypermaterialism-i-01.jpg
+    - /assets/images/tentacular-hypermaterialism-i/tentacular-hypermaterialism-i-02.jpg
+    - /assets/images/tentacular-hypermaterialism-i/tentacular-hypermaterialism-i-03.jpg
+    - /assets/images/tentacular-hypermaterialism-i/tentacular-hypermaterialism-i-04.jpg
+---
+
+Agustin Rosa examines our intimate entanglement with the infrastructures that shape contemporary desire. Acts of alteration and reconfiguration interrupt the familiarity of everyday devices and expose the ways they condition attention and habit, blurring the boundary between what we hold and what holds us.
+
+**Tentacular Hypermaterialism Series:**
+- [Tentacular Hypermaterialism II](/tentacular-hypermaterialism-ii)
