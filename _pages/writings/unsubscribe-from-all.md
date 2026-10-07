@@ -16,3 +16,7 @@ images:
 <video controls="controls" width="800" name="unsubscribe-from-all" src="/assets/images/unsubscribe-from-all/unsubscribe-from-all.mp4"></video>
 
 A web-based unsubscription form unfolds into an interactive horror story about the paranoia and dysmorphia of modern digital life in the corporate platform complex, narrative paths unfolding differently depending on your choices.
+
+## Archive Version
+
+<a href="/unsubscribe-from-all-interactive">Canonical link</a>
