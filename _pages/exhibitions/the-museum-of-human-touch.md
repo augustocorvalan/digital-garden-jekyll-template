@@ -29,4 +29,5 @@ Informed by glitch feminism and transhuman theory, the work resists fixed catego
 <p><a class="internal-link" href="/speculative-touch-interface-bone">Speculative Touch Interface (Bone)</a></p>
 <p><a class="internal-link" href="/speculative-touch-interface-hair">Speculative Touch Interface (Hair)</a></p>
 <p><a class="internal-link" href="/speculative-touch-interface-cctv">Speculative Touch Interface (CCTV)</a></p>
+<p><a class="internal-link" href="/museum-of-human-touch-book">Museum of Human Touch (Book)</a></p>
 <hr/>
