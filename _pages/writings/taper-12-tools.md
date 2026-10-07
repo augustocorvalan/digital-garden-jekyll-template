@@ -14,7 +14,7 @@ images:
 <a class="internal-link" href="/extremely-constrained-notepad">Extremely Constrained Notepad</a>
 <hr/>
 
-*Taper #6: Throw of a Dice…* explores themes of chance, probability, and the role of randomness in creative processes. This issue investigates how artists and writers incorporate elements of chance into their work, questioning the relationship between intentionality and accident in the creative process.
+Taper is an online literary journal for computational poetry and literary art, published twice yearly by [Bad Quarto](https://badquar.to/).
 
 Toy box if not hefty tool chest, issue #12 of Taper offers 32 poems — programs — systems — for your delectation, play, and use in response to the theme Tools.
 
