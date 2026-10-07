@@ -1,81 +1,95 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8cfa8785-8df8-4aad-ad35-8f1c790b8baf/deploy-status)](https://app.netlify.com/sites/digital-garden-jekyll-template/deploys)
+# Portfolio-Web
 
-# Digital garden Jekyll template
+Artist website for Agustin Rosa — https://rosa-studio.com
 
-Use this template repository to get started with your own digital garden.
+Jekyll + Tailwind, built on Maxime Vaillancourt's [digital garden Jekyll template](https://github.com/maximevaillancourt/digital-garden-jekyll-template) (MIT license). Deployed with Netlify (`netlify.toml`).
 
-**I wrote a tutorial explaining how to set it up: [Setting up your own digital garden with Jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)**
+The vault side of the workflow (project folders, inbox notes, checklists) lives in `50 Art/Workflows` — see `100-portfolio-ready.md`.
 
-Preview the template here: https://digital-garden-jekyll-template.netlify.app/
+## Local development
 
--   Based on Jekyll, a static website generator
--   Supports Roam-style double bracket link syntax to other notes
--   Creates backlinks to other notes automatically
--   Features link previews on hover
--   Includes graph visualization of the notes and their links
--   Features a simple and responsive design
--   Supports Markdown or HTML notes
+Needs Ruby 3.2.1 (`.ruby-version`); the macOS system Ruby (2.6) is too old for Jekyll 4.3.
 
-<img width="1522" alt="Screen Shot 2020-05-19 at 23 05 46" src="https://user-images.githubusercontent.com/8457808/82400515-7d026d80-9a25-11ea-83f1-3b9cb8347e07.png">
+```bash
+bundle install
+yarn install
+bundle exec jekyll serve
+```
 
-## A note about GitHub Pages
+Then open http://localhost:4000. Always run Jekyll from this folder (the site root), never from inside `_pages/` — doing so leaves stray `.jekyll-cache/` and `_site/` folders in the content tree.
 
-> [!NOTE]  
-> **Update (January 2023)**: it seems that GitHub Pages supports custom plugins now, thanks to GitHub Actions ([view relevant discussion](https://github.com/maximevaillancourt/digital-garden-jekyll-template/discussions/144)).
+## Where things live
 
-GitHub Pages only partially supports this template: to power the interactive notes graph, this template uses a custom Jekyll plugin to generate the graph data in [`notes_graph.json`](https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/7ac331a4113bac77c993856562acc2bfbde9f2f7/_plugins/bidirectional_links_generator.rb#L102), and [GitHub Pages doesn't support custom Jekyll plugins](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins).
+| What | Where | Layout |
+| --- | --- | --- |
+| Objects (sculpture, installation) | `_pages/objects/<slug>.md` | `project` |
+| Individual writings / e-lit pieces | `_pages/writings/<slug>.md` | `project` |
+| Publication / magazine issue pages | `_pages/writings/<slug>.md` | `exhibit` |
+| Exhibitions | `_pages/exhibitions/<slug>.md` | `exhibit` |
+| CV (about page) | `_data/cv/*.csv` | rendered by `_pages/about.html` |
+| Home page "Editor" cards | `_data/editor.csv` | rendered by `_pages/index.html` |
+| Footer contact links | `_data/contact.csv` | `_includes/footer.html` |
+| Images & video | `assets/images/<slug>/` | |
 
-If you want to use the graph with GitHub Pages, you may try building your garden locally using Jekyll then pushing the result to GitHub Pages.
+Every page is served at `/<filename-without-extension>` (e.g. `_pages/objects/quatro-bocas.md` → `/quatro-bocas`), whatever folder it sits in.
 
-Alternatively, you may deploy your garden to Netlify and it'll work out of the box. [I wrote a guide explaining how to set this up](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
+Each folder has a `_template.md` describing the front matter.
 
-If you don't care about the graph, you can simply remove it from this layout, [as explained here](https://github.com/maximevaillancourt/digital-garden-jekyll-template/discussions/132#discussioncomment-3625772).
+## Adding a work
 
-## License
+1. Put web-sized images in `assets/images/<slug>/`, named `<slug>-01.png`, `<slug>-02.png`, …
+2. Create `_pages/objects/<slug>.md` or `_pages/writings/<slug>.md`:
 
-Source code is available under the [MIT license](20%20Professional/[21]%20Portfolio/portfolio-site-2/node_modules/arg/LICENSE.md).
+    ```yaml
+    ---
+    layout: project
+    title: Work Title
+    description: three-to-five word tagline
+    created_at: 2025
+    materials: paper pulp, acrylic     # objects only
+    size: 12" x 16" x 5"               # objects only
+    publication_link: https://…        # writings only: adds a "Read Here" link
+    show_home: true                    # list it on the home page
+    thumbnail: /assets/images/<slug>/<slug>-01.png
+    images:
+        - /assets/images/<slug>/<slug>-01.png
+    ---
 
-# Local development
+    Artist statement / description.
+    ```
 
-- cd into project folder - `Portfolio-Web`
-- run `bundle install` to install Gem dependencies
-- run `yarn install` to install JS dependencies
-- run `bundle exec jekyll serve` to start the local server
-- open your browser and go to `http://localhost:4000`
+3. The home page shows pages with `show_home: true`, newest `created_at` first, grouped by folder (objects / writings).
 
-# Work in Progress
+## Adding a publication or exhibition
 
-### Global
+Create a page with `layout: exhibit` (in `writings/` for publications, `exhibitions/` for shows) and link each included work under a "Works" heading:
 
-- Add Objects page that lists all sculpture and art projects 
-- Add Editor page that lists all editorial projects
-- Add Writings page that lists all writing and electronic literature projects 
-- Add links in home page to all the above pages
-- Make sure home page only displays "featrured" projects
-- Add CV page that lists all exhibitions, awards, and residencies
-- Add nav
+```html
+<hr/>
+<h3 class="uppercase">Works</h3>
+<a class="internal-link" href="/work-slug">Work Title</a>
+<hr/>
 
+Description of the issue or show.
+```
 
-### Home Page
+That link is what makes the publication/exhibition appear in the work page's sidebar (backlinks).
 
-- Add intro text with links
--   Add projects
-    - Diagrammatic Poems
-    - Let's Go Somewhere Else (Neon)
-    - Lunar Landscapes
-    - Bocas
-    - Bamboo paper pulp stick piece (name?)  
+Then add a row to the matching CV file.
 
-# Resources
+## Updating the CV
 
-## UI Kits
+Edit the CSVs in `_data/cv/` — `exhibitions`, `publications`, `curation`, `editor`, `awards`, `residencies`. Rows render in file order, so keep newest first. Fill `page` with an internal path (e.g. `/pulp`) to link the entry; leave it blank for plain text. In `exhibitions.csv`, `hidden=true` keeps a row in the record without showing it.
 
--   [HyperUI - free open-source tailwind UI elements](https://www.hyperui.dev/)
+## Backlog
 
-## Jekyll + Tailwind
+- Objects, Writings and Editor index pages, plus a nav linking them
+- Home page: only show featured projects
+- Home page projects to add: Diagrammatic Poems, Lunar Landscapes, Bocas, bamboo paper pulp stick piece
 
--   https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll
--   https://mzrn.sh/2022/04/09/starting-a-blank-jekyll-site-with-tailwind-css-in-2022/
--   https://medium.com/@mauddev/jekyll-tailwind-netlify-9496352b49ee
+## Resources
 
-## Artist web inspo
+- [HyperUI — free Tailwind UI elements](https://www.hyperui.dev/)
+- [Setting up a digital garden with Jekyll](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll)
+- [Blank Jekyll site with Tailwind (2022)](https://mzrn.sh/2022/04/09/starting-a-blank-jekyll-site-with-tailwind-css-in-2022/)
+- [Jekyll + Tailwind + Netlify](https://medium.com/@mauddev/jekyll-tailwind-netlify-9496352b49ee)
