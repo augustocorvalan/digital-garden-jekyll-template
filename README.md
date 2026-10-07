@@ -27,7 +27,7 @@ Then open http://localhost:4000. Always run Jekyll from this folder (the site ro
 | Publication / magazine issue pages | `_pages/writings/<slug>.md` | `exhibit` |
 | Exhibitions | `_pages/exhibitions/<slug>.md` | `exhibit` |
 | CV (about page) | `_data/cv/*.csv` | rendered by `_pages/about.html` |
-| Home page "Editor" cards | `_data/editor.csv` | rendered by `_pages/index.html` |
+| Home page "Editor" cards | `_data/home_editor.csv` | rendered by `_pages/index.html` |
 | Footer contact links | `_data/contact.csv` | `_includes/footer.html` |
 | Images & video | `assets/images/<slug>/` | |
 

@@ -43,7 +43,7 @@ permalink: /
 
 <h2 id="editor" class="text-5xl mt-18 uppercase border-solid border-0 border-l-4 border-red-500 pl-4">Editor</h2>
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
-{% for project in site.data.editor %}
+{% for project in site.data.home_editor %}
     {% include home-card.html 
         url=project.link 
         title=project.title 
