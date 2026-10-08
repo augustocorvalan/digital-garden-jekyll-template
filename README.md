@@ -47,7 +47,13 @@ Each folder has a `_template.md` describing the front matter.
 
 ## Adding a work
 
-1. Put web-sized images in `assets/images/<slug>/`, named `<slug>-01.png`, `<slug>-02.png`, …
+1. Put web-sized images in `assets/images/<slug>/`, named `<slug>-01.jpg`, `<slug>-02.jpg`, … (JPEG, about 1600px on the long side). If the work goes on the home page, also make a card thumbnail `<slug>-thumbnail.jpg` at 800×1067 (3:4). Never use a full-size image as the thumbnail, because every card loads on the home page:
+
+    ```bash
+    sips -s format jpeg -s formatOptions 78 -Z 1600 original.png --out assets/images/<slug>/<slug>-01.jpg
+    sips -s format jpeg -s formatOptions 78 -z 1067 800 cropped-3x4.png --out assets/images/<slug>/<slug>-thumbnail.jpg
+    ```
+
 2. Create `_pages/objects/<slug>.md` or `_pages/writings/<slug>.md`:
 
     ```yaml
@@ -60,9 +66,9 @@ Each folder has a `_template.md` describing the front matter.
     size: 12" x 16" x 5"               # objects only
     publication_link: https://…        # writings only: adds a "Read Here" link
     show_home: true                    # list it on the home page
-    thumbnail: /assets/images/<slug>/<slug>-01.png
+    thumbnail: /assets/images/<slug>/<slug>-thumbnail.jpg
     images:
-        - /assets/images/<slug>/<slug>-01.png
+        - /assets/images/<slug>/<slug>-01.jpg
     ---
 
     Artist statement / description.
