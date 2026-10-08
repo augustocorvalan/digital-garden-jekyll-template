@@ -5,7 +5,7 @@ description: generative surveillance poem
 created_at: 2025
 publication_link: https://remediatelitmag.xyz/issue4/
 show_home: true
-thumbnail: /assets/images/luxury-desire-recording-machine/luxury-desire-recording-machine-thumbnail.png
+thumbnail: /assets/images/luxury-desire-recording-machine/luxury-desire-recording-machine-thumbnail.jpg
 images:
     - /assets/images/luxury-desire-recording-machine/luxury-desire-recording-machine-01.png
     - /assets/images/luxury-desire-recording-machine/luxury-desire-recording-machine-02.png

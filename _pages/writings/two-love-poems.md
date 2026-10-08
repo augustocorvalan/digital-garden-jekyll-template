@@ -5,7 +5,7 @@ description: intimacy & consumption
 created_at: 2023
 publication_link: https://www.thismuch.org/2023
 show_home: true
-thumbnail: assets/images/writings/thismuch-love-poems/thismuch-1.png
+thumbnail: assets/images/writings/thismuch-love-poems/thismuch-1-thumbnail.jpg
 images:
     - /assets/images/writings/thismuch-love-poems/thismuch-1.png
     - /assets/images/writings/thismuch-love-poems/thismuch-2.png

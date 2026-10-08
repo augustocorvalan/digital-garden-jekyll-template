@@ -6,7 +6,7 @@ created_at: 2025-06-01
 materials: Paper pulp, acrylic, fake nails, electrical wiring, keyboard
 size: 17" x 6" x 8"
 show_home: true
-thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-finger-03.png
+thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-finger-03-thumbnail.jpg
 images:
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-finger-01.png
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-finger-02.png

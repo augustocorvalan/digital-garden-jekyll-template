@@ -6,7 +6,7 @@ created_at: 2026
 materials: Smartphone, tape, paper pulp, watercolor
 size:
 show_home: true
-thumbnail: /assets/images/tentacular-hypermaterialism-ii/tentacular-hypermaterialism-ii-01.jpg
+thumbnail: /assets/images/tentacular-hypermaterialism-ii/tentacular-hypermaterialism-ii-01-thumbnail.jpg
 images:
     - /assets/images/tentacular-hypermaterialism-ii/tentacular-hypermaterialism-ii-01.jpg
     - /assets/images/tentacular-hypermaterialism-ii/tentacular-hypermaterialism-ii-02.jpg

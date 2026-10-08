@@ -5,7 +5,7 @@ description: machine-making machine poetry
 created_at: 2021
 publication_link: https://taper.badquar.to/6/maquinx_de_hacer_maquinxs.html
 show_home: true
-thumbnail: assets/images/writings/maquina-de-hacer-maquina.png
+thumbnail: assets/images/writings/maquina-de-hacer-maquina-thumbnail.jpg
 images:
     - /assets/images/writings/maquina-de-hacer-maquina.png
 ---

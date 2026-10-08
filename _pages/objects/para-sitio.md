@@ -6,7 +6,7 @@ created_at: 2024
 materials: paper pulp and water color
 size: 27"x13"x8"
 show_home: true
-thumbnail: /assets/images/para-sitio/parasitio-01-thumb.png
+thumbnail: /assets/images/para-sitio/parasitio-01-thumb.jpg
 images:
     - /assets/images/para-sitio/parasitio-01.png
     - /assets/images/para-sitio/parasitio-01-detail.png

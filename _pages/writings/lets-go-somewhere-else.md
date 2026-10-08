@@ -5,7 +5,7 @@ description: interactive pop-up window horror story
 created_at: 2019
 publication_link: https://deadalivemagazine.com/vol1/lets-go-somewhere-else.html
 show_home: true
-thumbnail: assets/images/lets-go-somewhere-else/lets-go-2.png
+thumbnail: assets/images/lets-go-somewhere-else/lets-go-2-thumbnail.jpg
 images:
     - /assets/images/lets-go-somewhere-else/lets-go-1.png
     - /assets/images/lets-go-somewhere-else/lets-go-2.png

@@ -5,7 +5,7 @@ title: Extremely Constrained Notepad
 description: word processor with amnesia
 created_at: 2024
 publication_link: https://taper.badquar.to/12/extremely_constrained_notepad.html
-thumbnail: assets/images/extremely-constrained-notepad/thumbnail.png
+thumbnail: assets/images/extremely-constrained-notepad/thumbnail.jpg
 images:
     - /assets/images/extremely-constrained-notepad/thumbnail.png
     - /assets/images/extremely-constrained-notepad/final-01.png

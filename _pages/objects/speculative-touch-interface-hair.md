@@ -6,7 +6,7 @@ created_at: 2025
 materials: Paper pulp, acrylic, human hair, glue
 size: 26" x 11" x 7"
 show_home: true
-thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-hair-03.png
+thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-hair-03-thumbnail.jpg
 images:
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-hair-01.png
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-hair-02.png

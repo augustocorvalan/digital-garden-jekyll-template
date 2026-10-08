@@ -6,7 +6,7 @@ created_at: 2025
 materials: Paper pulp, acrylic, glue, plastic tubing, plexiglass, surveillance footage 
 size: 32" x 14" x 8"
 show_home: true
-thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-cctv-02.png
+thumbnail: /assets/images/speculative-touch-interfaces/speculative-touch-interface-cctv-02-thumbnail.jpg
 images:
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-cctv-01.png
     - /assets/images/speculative-touch-interfaces/speculative-touch-interface-cctv-02.png

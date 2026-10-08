@@ -5,7 +5,7 @@ description: interactive horror story
 created_at: 2024
 publication_link: https://thenewriverjournal.org/wp-content/uploads/2024/2024%20Spring%20Full%20Piece%20Uploads/unsubscribe%20from%20all%20-%20agustin%20rosa.html
 show_home: true
-thumbnail: /assets/images/unsubscribe-from-all/unsubscribe-from-all-03.png
+thumbnail: /assets/images/unsubscribe-from-all/unsubscribe-from-all-03-thumbnail.jpg
 images:
     - /assets/images/unsubscribe-from-all/unsubscribe-from-all-01.png
     - /assets/images/unsubscribe-from-all/unsubscribe-from-all-02.png

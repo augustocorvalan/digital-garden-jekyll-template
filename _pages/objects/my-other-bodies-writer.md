@@ -6,7 +6,7 @@ created_at: 2025-07-01
 materials: Arduino microcontroller, thermal printer, wiring, plastic tubing, keyboard keys, foam, spray paint, 3-d printed body parts
 size: variable dimensions
 show_home: true
-thumbnail: /assets/images/my-other-bodies-writer/my-other-bodies-writer-02.png
+thumbnail: /assets/images/my-other-bodies-writer/my-other-bodies-writer-02-thumbnail.jpg
 images:
     - /assets/images/my-other-bodies-writer/my-other-bodies-writer-01.png
     - /assets/images/my-other-bodies-writer/my-other-bodies-writer-02.png

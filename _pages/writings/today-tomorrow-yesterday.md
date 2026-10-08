@@ -5,7 +5,7 @@ description: generative poetry on non-linear time
 created_at: 2018
 publication_link: https://taper.badquar.to/2/tty.html
 show_home: true
-thumbnail: assets/images/writings/tty.png
+thumbnail: assets/images/writings/tty-thumbnail.jpg
 images:
     - /assets/images/writings/tty.png
 ---

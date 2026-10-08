@@ -4,7 +4,7 @@ show_home: true
 title: Two Breakup Poems
 description: Diagrammatic poetry
 created_at: 2023
-thumbnail: assets/images/two-breakup-poems/break-up-poem-01-tuyo.png
+thumbnail: assets/images/two-breakup-poems/break-up-poem-01-tuyo-thumbnail.jpg
 images:
     - /assets/images/two-breakup-poems/break-up-poem-01-tuyo.png
     - /assets/images/two-breakup-poems/break-up-poem-02-Nosotros.png

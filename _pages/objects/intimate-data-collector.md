@@ -6,7 +6,7 @@ created_at: 2025-07-01
 materials: paper pulp, acrylic, plastic tubing, human nails
 size: variable dimensions
 show_home: true
-thumbnail: /assets/images/intimate-data-collector/intimate-data-collector-01.png
+thumbnail: /assets/images/intimate-data-collector/intimate-data-collector-01-thumbnail.jpg
 images:
     - /assets/images/intimate-data-collector/intimate-data-collector-01.png
     - /assets/images/intimate-data-collector/intimate-data-collector-02.png

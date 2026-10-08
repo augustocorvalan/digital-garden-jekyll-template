@@ -6,7 +6,7 @@ description: shape-shifting outdoor sculpture
 created_at: 2023
 materials: bambu, string, acrylic
 size: 6' x 5' x 8'
-thumbnail: assets/images/mutantechitecture/mutantechitecture_outdoor_thumb.png
+thumbnail: assets/images/mutantechitecture/mutantechitecture_outdoor_thumb.jpg
 images:
     - /assets/images/mutantechitecture/mutantechitecture_outdoor_1.webp
     - /assets/images/mutantechitecture/mutantechitecture_outdoor_4.webp
